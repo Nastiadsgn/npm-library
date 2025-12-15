@@ -5,6 +5,12 @@ import postcss from 'rollup-plugin-postcss';
 import terser from '@rollup/plugin-terser';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import svgr from '@svgr/rollup';
+import alias from '@rollup/plugin-alias';
+import { fileURLToPath } from 'url';
+import { dirname, resolve as pathResolve } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 export default [
   {
@@ -25,6 +31,19 @@ export default [
     ],
     plugins: [
       peerDepsExternal(),
+      // Redirect icons/index.js to the generated static registry for library builds
+      alias({
+        entries: [
+          {
+            find: /^\.\.\/\.\.\/\.\.\/icons$/,
+            replacement: pathResolve(__dirname, 'src/icons/iconRegistry.generated.js')
+          },
+          {
+            find: /^\.\.\/icons$/,
+            replacement: pathResolve(__dirname, 'src/icons/iconRegistry.generated.js')
+          }
+        ]
+      }),
       resolve({
         extensions: ['.js', '.jsx'],
       }),

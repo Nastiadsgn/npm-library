@@ -76,8 +76,8 @@ export { default as CodeExample } from '../ui/components/showcase/CodeExample';
 export { default as MainToolbar } from '../ui/components/showcase/MainToolbar';
 export { default as ToolbarDemo } from '../ui/components/showcase/ToolbarDemo';
 
-// Icon Registry
-export { default as iconRegistry, iconNames, getIcon } from '../icons';
+// Icon Registry - using pre-generated static imports for library build
+export { default as iconRegistry, iconNames, getIcon } from '../icons/iconRegistry.generated';
 
 // Prototyping Templates
 export { BasicIDEPrototype, MinimalIDEPrototype, DialogPrototype, IDEApp } from '../templates';
