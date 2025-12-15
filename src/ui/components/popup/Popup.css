@@ -1,0 +1,36 @@
+.popup {
+    position: absolute;
+    z-index: 1000;
+    background-color: var(--popup-bg);
+    border: 1px solid var(--popup-border);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    min-width: 200px;
+    max-width: 400px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity 0.15s ease, visibility 0.15s ease, transform 0.15s ease;
+}
+
+.popup-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-options {
+    padding: 8px 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Dark theme support */
+.theme-dark .popup {
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.40);
+}

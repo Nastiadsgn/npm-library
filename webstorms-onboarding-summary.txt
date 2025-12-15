@@ -1,0 +1,119 @@
+=== Changes Summary: webstorms-onboarding branch ===
+
+ src/App.css                                        |   9 -
+ src/App.js                                         | 347 +++++++++++++++++----
+ src/features/webstorm/WebStormOnboarding.css       | 302 ------------------
+ src/features/webstorm/WebStormOnboarding.jsx       | 254 ---------------
+ src/features/webstorm/index.js                     |   3 -
+ ...oduct=IDEA Ultimate, Size=128, OS=Windows 3.svg |  19 --
+ ...roduct=IDEA Ultimate, Size=16, OS=Windows 3.svg |  14 -
+ ...roduct=IDEA Ultimate, Size=24, OS=Windows 3.svg |  19 --
+ ...oduct=IDEA Ultimate, Size=256, OS=Windows 3.svg |  24 --
+ ...roduct=IDEA Ultimate, Size=32, OS=Windows 3.svg |  19 --
+ ...roduct=IDEA Ultimate, Size=48, OS=Windows 3.svg |  24 --
+ ...roduct=IDEA Ultimate, Size=64, OS=Windows 2.svg |  19 --
+ ...Product=IJ Platform, Size=128, OS=Windows 3.png | Bin 4759 -> 0 bytes
+ .../Product=IJ Platform, Size=16, OS=Windows 3.png | Bin 502 -> 0 bytes
+ ...Product=IJ Platform, Size=256, OS=Windows 3.png | Bin 11403 -> 0 bytes
+ .../Product=IJ Platform, Size=32, OS=Windows 3.png | Bin 914 -> 0 bytes
+ .../Product=IJ Platform, Size=48, OS=Windows 3.png | Bin 1379 -> 0 bytes
+ .../Product=IJ Platform, Size=64, OS=Windows 3.png | Bin 1998 -> 0 bytes
+ .../Product=PhpStorm, Size=128, OS=Windows 3.svg   |  18 --
+ .../Product=PhpStorm, Size=16, OS=Windows 3.svg    |   6 -
+ .../Product=PhpStorm, Size=24, OS=Windows 3.svg    |  18 --
+ .../Product=PhpStorm, Size=256, OS=Windows 3.svg   |  18 --
+ .../Product=PhpStorm, Size=32, OS=Windows 3.svg    |  18 --
+ .../Product=PhpStorm, Size=48, OS=Windows 3.svg    |  18 --
+ .../Product=PhpStorm, Size=64, OS=Windows 3.svg    |  18 --
+ ...Product=PyCharm Pro, Size=128, OS=Windows 3.svg |  18 --
+ .../Product=PyCharm Pro, Size=16, OS=Windows 3.svg |   6 -
+ .../Product=PyCharm Pro, Size=24, OS=Windows 3.svg |  18 --
+ ...Product=PyCharm Pro, Size=256, OS=Windows 3.svg |  18 --
+ .../Product=PyCharm Pro, Size=32, OS=Windows 3.svg |  18 --
+ .../Product=PyCharm Pro, Size=48, OS=Windows 3.svg |  18 --
+ .../Product=PyCharm Pro, Size=64, OS=Windows 3.svg |  18 --
+ .../Product=WebStorm, Size=128, OS=Windows 3.svg   |  18 --
+ .../Product=WebStorm, Size=16, OS=Windows 3.svg    |   6 -
+ .../Product=WebStorm, Size=24, OS=Windows 3.svg    |  18 --
+ .../Product=WebStorm, Size=256, OS=Windows 3.svg   |  18 --
+ .../Product=WebStorm, Size=32, OS=Windows 3.svg    |  18 --
+ .../Product=WebStorm, Size=64, OS=Windows 3.svg    |  18 --
+ ...Cover Controller, Size=128, OS=Windows@2x 3.png | Bin 30230 -> 0 bytes
+ ...Cover Controller, Size=256, OS=Windows512 3.png | Bin 105270 -> 0 bytes
+ ...Product=dotCover, Size=256, OS=Windows512 3.png | Bin 107435 -> 0 bytes
+ .../Product=dotCover, Size=32, OS=Windows@2x 3.png | Bin 3446 -> 0 bytes
+ .../Product=dotPeek, Size=128, OS=Windows@2x 3.png | Bin 25723 -> 0 bytes
+ .../Product=dotPeek, Size=16, OS=Windows@2x 3.png  | Bin 413 -> 0 bytes
+ ...tTrace Controller, Size=16, OS=Windows@2x 3.png | Bin 418 -> 0 bytes
+ ...Perfomance Viewer, Size=24, OS=Windows@2x 3.png | Bin 2346 -> 0 bytes
+ ...Perfomance Viewer, Size=64, OS=Windows@2x 3.png | Bin 9787 -> 0 bytes
+ ... Timeline Viewer, Size=128, OS=Windows@2x 3.png | Bin 27783 -> 0 bytes
+ ...Product=dotTrace, Size=128, OS=Windows@2x 3.png | Bin 28275 -> 0 bytes
+ .../Product=dotTrace, Size=32, OS=Windows@2x 3.png | Bin 3195 -> 0 bytes
+ .../Product=dotTrace, Size=64, OS=Windows@2x 3.png | Bin 8889 -> 0 bytes
+ src/ui/components/statusbar/StatusBar.css          |  32 +-
+ src/ui/components/statusbar/StatusBar.jsx          |  51 ++-
+ src/ui/components/statusbar/StatusBarProgress.css  |  29 +-
+ src/ui/components/statusbar/StatusBarWidget.css    |  46 +++
+ src/ui/components/statusbar/StatusBarWidget.jsx    |  10 +-
+ 56 files changed, 402 insertions(+), 1143 deletions(-)
+
+=== Modified Files ===
+M	src/App.css
+M	src/App.js
+M	src/ui/components/statusbar/StatusBar.css
+M	src/ui/components/statusbar/StatusBar.jsx
+M	src/ui/components/statusbar/StatusBarProgress.css
+M	src/ui/components/statusbar/StatusBarWidget.css
+M	src/ui/components/statusbar/StatusBarWidget.jsx
+
+=== Deleted Files ===
+D	src/features/webstorm/WebStormOnboarding.css
+D	src/features/webstorm/WebStormOnboarding.jsx
+D	src/features/webstorm/index.js
+D	src/icons/ide_logos/Product=IDEA Ultimate, Size=128, OS=Windows 3.svg
+D	src/icons/ide_logos/Product=IDEA Ultimate, Size=16, OS=Windows 3.svg
+D	src/icons/ide_logos/Product=IDEA Ultimate, Size=24, OS=Windows 3.svg
+D	src/icons/ide_logos/Product=IDEA Ultimate, Size=256, OS=Windows 3.svg
+D	src/icons/ide_logos/Product=IDEA Ultimate, Size=32, OS=Windows 3.svg
+D	src/icons/ide_logos/Product=IDEA Ultimate, Size=48, OS=Windows 3.svg
+D	src/icons/ide_logos/Product=IDEA Ultimate, Size=64, OS=Windows 2.svg
+D	src/icons/ide_logos/Product=IJ Platform, Size=128, OS=Windows 3.png
+D	src/icons/ide_logos/Product=IJ Platform, Size=16, OS=Windows 3.png
+D	src/icons/ide_logos/Product=IJ Platform, Size=256, OS=Windows 3.png
+D	src/icons/ide_logos/Product=IJ Platform, Size=32, OS=Windows 3.png
+D	src/icons/ide_logos/Product=IJ Platform, Size=48, OS=Windows 3.png
+D	src/icons/ide_logos/Product=IJ Platform, Size=64, OS=Windows 3.png
+D	src/icons/ide_logos/Product=PhpStorm, Size=128, OS=Windows 3.svg
+D	src/icons/ide_logos/Product=PhpStorm, Size=16, OS=Windows 3.svg
+D	src/icons/ide_logos/Product=PhpStorm, Size=24, OS=Windows 3.svg
+D	src/icons/ide_logos/Product=PhpStorm, Size=256, OS=Windows 3.svg
+D	src/icons/ide_logos/Product=PhpStorm, Size=32, OS=Windows 3.svg
+D	src/icons/ide_logos/Product=PhpStorm, Size=48, OS=Windows 3.svg
+D	src/icons/ide_logos/Product=PhpStorm, Size=64, OS=Windows 3.svg
+D	src/icons/ide_logos/Product=PyCharm Pro, Size=128, OS=Windows 3.svg
+D	src/icons/ide_logos/Product=PyCharm Pro, Size=16, OS=Windows 3.svg
+D	src/icons/ide_logos/Product=PyCharm Pro, Size=24, OS=Windows 3.svg
+D	src/icons/ide_logos/Product=PyCharm Pro, Size=256, OS=Windows 3.svg
+D	src/icons/ide_logos/Product=PyCharm Pro, Size=32, OS=Windows 3.svg
+D	src/icons/ide_logos/Product=PyCharm Pro, Size=48, OS=Windows 3.svg
+D	src/icons/ide_logos/Product=PyCharm Pro, Size=64, OS=Windows 3.svg
+D	src/icons/ide_logos/Product=WebStorm, Size=128, OS=Windows 3.svg
+D	src/icons/ide_logos/Product=WebStorm, Size=16, OS=Windows 3.svg
+D	src/icons/ide_logos/Product=WebStorm, Size=24, OS=Windows 3.svg
+D	src/icons/ide_logos/Product=WebStorm, Size=256, OS=Windows 3.svg
+D	src/icons/ide_logos/Product=WebStorm, Size=32, OS=Windows 3.svg
+D	src/icons/ide_logos/Product=WebStorm, Size=64, OS=Windows 3.svg
+D	src/icons/ide_logos/Product=dotCover Controller, Size=128, OS=Windows@2x 3.png
+D	src/icons/ide_logos/Product=dotCover Controller, Size=256, OS=Windows512 3.png
+D	src/icons/ide_logos/Product=dotCover, Size=256, OS=Windows512 3.png
+D	src/icons/ide_logos/Product=dotCover, Size=32, OS=Windows@2x 3.png
+D	src/icons/ide_logos/Product=dotPeek, Size=128, OS=Windows@2x 3.png
+D	src/icons/ide_logos/Product=dotPeek, Size=16, OS=Windows@2x 3.png
+D	src/icons/ide_logos/Product=dotTrace Controller, Size=16, OS=Windows@2x 3.png
+D	src/icons/ide_logos/Product=dotTrace Perfomance Viewer, Size=24, OS=Windows@2x 3.png
+D	src/icons/ide_logos/Product=dotTrace Perfomance Viewer, Size=64, OS=Windows@2x 3.png
+D	src/icons/ide_logos/Product=dotTrace Timeline Viewer, Size=128, OS=Windows@2x 3.png
+D	src/icons/ide_logos/Product=dotTrace, Size=128, OS=Windows@2x 3.png
+D	src/icons/ide_logos/Product=dotTrace, Size=32, OS=Windows@2x 3.png
+D	src/icons/ide_logos/Product=dotTrace, Size=64, OS=Windows@2x 3.png

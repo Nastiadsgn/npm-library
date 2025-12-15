@@ -1,0 +1,133 @@
+/* Base input wrapper */
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: stretch;
+    justify-content: center;
+    padding: 6px 0;
+    width: 100%;
+}
+
+/* Input field base styles */
+.input {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 9px;
+    border: 1px solid var(--input-border);
+    background: var(--input-bg);
+    border-radius: 4px;
+    color: var(--input-text);
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    min-height: 28px;
+    box-sizing: border-box;
+    width: 100%;
+    outline: none;
+    overflow: hidden;
+}
+
+/* Hover state */
+.input:hover:not(:disabled):not(.input-disabled):not(:focus):not(.input-error) {
+    border: 1px solid var(--input-border-hover);
+}
+
+/* Focus state */
+.input:focus:not(.input-error) {
+    border: 2px solid var(--input-border-focus);
+    margin: -1px;
+}
+
+/* Error state */
+.input-error {
+    border: 2px solid var(--input-border-error);
+    margin: -1px;
+}
+
+.input-error:focus {
+    border: 2px solid var(--input-border-error-focus);
+    margin: -1px;
+}
+
+/* Disabled state */
+.input-disabled {
+    background: var(--input-bg-disabled);
+    color: var(--input-text-disabled);
+    border: 1px solid var(--input-border-disabled);
+    cursor: not-allowed;
+}
+
+/* Placeholder styling */
+.input::placeholder {
+    color: var(--input-text-placeholder);
+}
+
+/* Size variants */
+.input-small {
+    padding: 4px 8px;
+    min-height: 24px;
+}
+
+/* Container styles for labeled inputs */
+.input-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+/* Horizontal layout (default) */
+.input-container-horizontal {
+    gap: 6px;
+    align-items: center;
+}
+
+.input-container-horizontal .input-label {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 12px 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: var(--input-text);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.input-container-horizontal .input-field-wrapper {
+    flex: 1;
+    min-width: 0;
+    min-height: 1px;
+}
+
+.input-container-horizontal .input-field-wrapper .input-wrapper {
+    padding: 6px 0;
+}
+
+/* Vertical layout */
+.input-container-vertical {
+    flex-direction: column;
+    gap: 4px;
+}
+
+.input-container-vertical .input-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: var(--input-text);
+    margin-bottom: 2px;
+}
+
+.input-container-vertical .input-field-wrapper {
+    width: 100%;
+}
+
+.input-container-vertical .input-field-wrapper .input-wrapper {
+    padding: 0;
+}

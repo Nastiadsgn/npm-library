@@ -1,0 +1,410 @@
+/* Welcome Screen B - Alternative Welcome Screen Layout */
+.welcome-screen-b {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 900px;
+    height: 100%;
+    min-height: 600px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0.12) 100%), 
+                linear-gradient(90deg, #2B2D30 0%, #2B2D30 100%);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Main Toolbar - reuse from WelcomeScreenA */
+.welcome-screen-b .welcome-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    padding: 0 16px;
+    flex-shrink: 0;
+}
+
+.welcome-screen-b .toolbar-left-side {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.welcome-screen-b .toolbar-right-side {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+/* macOS Window Controls */
+.welcome-screen-b .window-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.welcome-screen-b .window-control {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.welcome-screen-b .window-control.close {
+    background: #FF5F56;
+}
+
+.welcome-screen-b .window-control.minimize {
+    background: #FFBD2E;
+}
+
+.welcome-screen-b .window-control.maximize {
+    background: #27C93F;
+}
+
+/* Project Selector */
+.welcome-screen-b .project-selector {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.15s ease;
+}
+
+.welcome-screen-b .project-selector:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.welcome-screen-b .project-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    background: linear-gradient(180deg, #A1A359 0%, #87AA59 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'JetBrains Mono', 'SF Mono', monospace;
+    font-weight: 500;
+    font-size: 12px;
+    color: white;
+}
+
+.welcome-screen-b .project-name {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #DFE1E5;
+}
+
+.welcome-screen-b .project-dropdown-icon {
+    opacity: 0.6;
+}
+
+/* Toolbar Icon Buttons */
+.welcome-screen-b .toolbar-icon-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.15s ease;
+}
+
+.welcome-screen-b .toolbar-icon-button:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.welcome-screen-b .toolbar-icon-button .icon {
+    opacity: 0.8;
+}
+
+/* Main Content Area */
+.welcome-screen-b .welcome-content {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+    gap: 1px;
+}
+
+/* Vertical Stripes */
+.welcome-screen-b .welcome-stripe {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 0 8px 0;
+    background: transparent;
+}
+
+.welcome-screen-b .welcome-stripe-left {
+    width: 40px;
+    flex-shrink: 0;
+}
+
+.welcome-screen-b .welcome-stripe-right {
+    width: 40px;
+    flex-shrink: 0;
+    padding-bottom: 6px;
+}
+
+/* Stripe Sections */
+.welcome-screen-b .stripe-section-top {
+    flex: 0 0 auto;
+}
+
+.welcome-screen-b .stripe-section-bottom {
+    flex: 0 0 auto;
+    margin-top: auto;
+}
+
+/* Center Content Area */
+.welcome-screen-b .welcome-center {
+    flex: 1;
+    min-width: 0;
+    min-height: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Editor - fixed height, scrollable content area */
+.welcome-screen-b .welcome-center .editor {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #17181A;
+}
+
+/* Welcome Screen Content */
+.welcome-screen-b .welcome-screen-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 40px;
+    margin: auto 0;
+}
+
+/* Welcome Title */
+.welcome-screen-b .welcome-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #DFE1E5;
+    margin: 0 0 32px 0;
+    text-align: center;
+}
+
+/* Horizontal Action Buttons */
+.welcome-screen-b .action-buttons-row {
+    display: flex;
+    gap: 0;
+    margin-bottom: 24px;
+}
+
+.welcome-screen-b .action-button-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 88px;
+}
+
+.welcome-screen-b .action-button-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    background: rgba(255, 255, 255, 0.07);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.welcome-screen-b .action-button-icon:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.welcome-screen-b .action-button-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.welcome-screen-b .action-button-label {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #DFE1E5;
+    text-align: center;
+}
+
+/* Recent Projects Section - Centered */
+.welcome-screen-b .recent-projects-section {
+    display: flex;
+    flex-direction: column;
+    width: 352px;
+}
+
+.welcome-screen-b .section-header {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: #6F737A;
+    padding: 4px 16px 4px 8px;
+    margin-bottom: 4px;
+}
+
+.welcome-screen-b .project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.welcome-screen-b .project-item {
+    display: flex;
+    gap: 8px;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.welcome-screen-b .project-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.welcome-screen-b .project-item-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'JetBrains Mono', 'SF Mono', monospace;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 22px;
+    color: white;
+    flex-shrink: 0;
+}
+
+.welcome-screen-b .project-item-icon.grass {
+    background: linear-gradient(180deg, #A1A359 0%, #87AA59 100%);
+}
+
+.welcome-screen-b .project-item-icon.teal {
+    background: linear-gradient(180deg, #24A394 0%, #279CCD 100%);
+}
+
+.welcome-screen-b .project-item-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+    flex: 1;
+}
+
+.welcome-screen-b .project-item-name {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #DFE1E5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.welcome-screen-b .project-item-path {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #6F737A;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Show All Link */
+.welcome-screen-b .show-all-link {
+    padding: 4px 16px 4px 8px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #6B9BFA;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+}
+
+.welcome-screen-b .show-all-link:hover {
+    text-decoration: underline;
+}
+
+/* Footer Buttons - same as WelcomeScreenA */
+.welcome-screen-b .welcome-footer {
+    display: flex;
+    gap: 8px;
+    margin-top: 32px;
+}
+
+.welcome-screen-b .welcome-footer-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 5px 8px;
+    background: rgba(255, 255, 255, 0.06);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.welcome-screen-b .welcome-footer-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.welcome-screen-b .welcome-footer-btn .icon {
+    opacity: 0.7;
+}
+
+.welcome-screen-b .welcome-footer-btn-text {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #B4B8BF;
+}
+
+.welcome-screen-b .welcome-footer-btn .dropdown-chevron {
+    opacity: 0.6;
+}
+
+/* Override StripeContainer for Welcome Screen */
+.welcome-screen-b .stripe-container {
+    background: transparent;
+}
+
+/* Override StatusBar for Welcome Screen */
+.welcome-screen-b .status-bar {
+    flex-shrink: 0;
+    border-top: none;
+    background: transparent;
+}

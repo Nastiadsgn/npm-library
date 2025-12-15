@@ -1,0 +1,142 @@
+/* Main Window Component - IDE Layout */
+.main-window {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 900px;
+    height: 100%;
+    min-height: 600px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0.12) 100%), 
+                linear-gradient(90deg, #2B2D30 0%, #2B2D30 100%);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Main Content Area (stripes + center) */
+.main-window-content {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+    gap: 1px;
+}
+
+/* Vertical Stripes */
+.main-window-stripe {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 0 8px 0;
+    background: transparent;
+}
+
+.main-window-stripe-left {
+    width: 40px;
+    flex-shrink: 0;
+}
+
+.main-window-stripe-right {
+    width: 40px;
+    flex-shrink: 0;
+    padding-bottom: 6px;
+}
+
+/* Stripe Sections */
+.stripe-section-top {
+    flex: 0 0 auto;
+}
+
+.stripe-section-bottom {
+    flex: 0 0 auto;
+    margin-top: auto;
+}
+
+/* Center Content Area */
+.main-window-center {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Top Row (Tool Windows + Editor) */
+.main-window-top-row {
+    display: flex;
+    flex: 1;
+    gap: 4px;
+    min-height: 0;
+}
+
+/* Tool Window overrides for Main Window context */
+.main-window-tool-window {
+    flex-shrink: 0;
+}
+
+.main-window-tool-window-left {
+    width: 280px !important;
+    height: auto !important;
+}
+
+.main-window-tool-window-right {
+    width: 320px !important;
+    height: auto !important;
+}
+
+.main-window-tool-window-bottom {
+    width: 100% !important;
+    height: 220px !important;
+}
+
+/* Editor Area */
+.editor-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: #17181A;
+    border-radius: 10px;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.editor-tabs {
+    display: flex;
+    align-items: center;
+    padding: 2px 4px;
+    border-bottom: 1px solid var(--border-primary);
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.editor-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.editor-content {
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
+}
+
+/* Override MainToolbar styles for Main Window context */
+.main-window .main-toolbar {
+    flex-shrink: 0;
+    border-bottom: none;
+    background: transparent;
+}
+
+/* Override StripeContainer for Main Window */
+.main-window .stripe-container {
+    background: transparent;
+}
+
+/* Override StatusBar for Main Window */
+.main-window .status-bar {
+    flex-shrink: 0;
+    border-top: none;
+    background: transparent;
+}
+

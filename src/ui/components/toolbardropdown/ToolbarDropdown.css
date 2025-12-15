@@ -1,0 +1,121 @@
+.toolbar-dropdown {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 12px 10px 12px 14px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 0;
+    transition: background-color 0.1s ease;
+}
+
+.toolbar-dropdown-content {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.toolbar-dropdown-icon {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toolbar-dropdown-text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+
+.toolbar-dropdown-text {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+    white-space: nowrap;
+}
+
+.toolbar-dropdown-chevron {
+    flex-shrink: 0;
+}
+
+/* Dark Theme (default - for dark toolbar background) */
+.toolbar-dropdown-theme-dark .toolbar-dropdown-text {
+    color: #EBECF0; /* Light/Gray/Gray 12 */
+}
+
+.toolbar-dropdown-theme-dark .toolbar-dropdown-icon {
+    color: #6C707E; /* Light/Gray/Gray 6 */
+}
+
+.toolbar-dropdown-theme-dark .toolbar-dropdown-chevron {
+    color: #818594; /* Light/Gray/Gray 7 */
+}
+
+.toolbar-dropdown-theme-dark.toolbar-dropdown-hovered .toolbar-dropdown-content,
+.toolbar-dropdown-theme-dark.toolbar-dropdown-pressed .toolbar-dropdown-content {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    padding: 7px 6px 7px 10px;
+    margin: -7px -6px -7px -10px;
+}
+
+/* Light Theme (for light toolbar with dark text) */
+.toolbar-dropdown-theme-light .toolbar-dropdown-text {
+    color: #EBECF0; /* Light/Gray/Gray 12 */
+}
+
+.toolbar-dropdown-theme-light .toolbar-dropdown-icon {
+    color: #6C707E; /* Light/Gray/Gray 6 */
+}
+
+.toolbar-dropdown-theme-light .toolbar-dropdown-chevron {
+    color: #818594; /* Light/Gray/Gray 7 */
+}
+
+.toolbar-dropdown-theme-light.toolbar-dropdown-hovered .toolbar-dropdown-content,
+.toolbar-dropdown-theme-light.toolbar-dropdown-pressed .toolbar-dropdown-content {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    padding: 7px 6px 7px 10px;
+    margin: -7px -6px -7px -10px;
+}
+
+/* Light Header Theme (for light header with dark text) */
+.toolbar-dropdown-theme-light-header .toolbar-dropdown-text {
+    color: #000000; /* Light/Gray/Gray 1 */
+}
+
+.toolbar-dropdown-theme-light-header .toolbar-dropdown-icon {
+    color: #6C707E; /* Light/Gray/Gray 6 */
+}
+
+.toolbar-dropdown-theme-light-header .toolbar-dropdown-chevron {
+    color: #818594; /* Light/Gray/Gray 7 */
+}
+
+.toolbar-dropdown-theme-light-header.toolbar-dropdown-hovered .toolbar-dropdown-content,
+.toolbar-dropdown-theme-light-header.toolbar-dropdown-pressed .toolbar-dropdown-content {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    padding: 7px 6px 7px 10px;
+    margin: -7px -6px -7px -10px;
+}
+
+/* Disabled state */
+.toolbar-dropdown-disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.toolbar-dropdown-disabled .toolbar-dropdown-text {
+    color: var(--text-disabled);
+}
+
+
+

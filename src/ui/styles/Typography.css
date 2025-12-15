@@ -1,0 +1,92 @@
+/* Text styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+.text-ui-default {
+    font-family: Inter, sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 123.077% */
+}
+
+.text-ui-small {
+    font-family: Inter, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 123.077% */
+}
+
+.text-editor-default {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 169.231% */
+}
+
+.text-editor-small {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 183.333% */
+}
+
+/* Typography Showcase Styles */
+.typography-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+.typography-item {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+    background: var(--bg-elevated);
+    border-radius: 8px;
+    border: 1px solid var(--border-primary);
+}
+
+.typography-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.typography-name {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--text-primary);
+}
+
+.typography-specs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.spec-item {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: var(--text-secondary);
+}
+
+.typography-class {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--accent-primary);
+    background: var(--bg-tertiary);
+    padding: 4px 8px;
+    border-radius: 4px;
+    width: fit-content;
+}

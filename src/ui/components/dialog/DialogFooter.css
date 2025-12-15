@@ -1,0 +1,55 @@
+/* Dialog Footer */
+.dialog-footer {
+    background-color: #2B2D30; /* Dark/Gray/Gray 2 */
+    position: relative;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+/* Footer Border */
+.dialog-footer-border {
+    height: 1px;
+    background-color: #393B40; /* Dark/Gray/Gray 3 */
+    width: 100%;
+}
+
+.dialog-footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 20px;
+    min-height: 57px;
+}
+
+/* Footer Left Side */
+.dialog-footer-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.dialog-footer-help {
+    width: 24px;
+    height: 24px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #CED0D6; /* Dark/Gray/Gray 11 */
+    transition: color 0.2s ease;
+}
+
+.dialog-footer-help:hover {
+    color: #DFE1E5; /* Dark/Gray/Gray 12 */
+}
+
+/* Footer Buttons */
+.dialog-footer-buttons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+

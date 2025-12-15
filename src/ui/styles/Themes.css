@@ -1,0 +1,574 @@
+/* Base Color Tokens */
+:root {
+
+    /* Gray */
+    --gray-white: #FFFFFF;
+    --gray-10: #F7F6F8;
+    --gray-20: #EBEBED;
+    --gray-30: #E1E1E4;
+    --gray-40: #CFD0D4;
+    --gray-50: #B6B8BD;
+    --gray-60: #9C9FA6;
+    --gray-70: #81858D;
+    --gray-80: #6F737C;
+    --gray-90: #5B5F68;
+    --gray-100: #4C5158;
+    --gray-110: #3B3D42;
+    --gray-120: #313337;
+    --gray-130: #252629;
+    --gray-140: #191A1C;
+    --gray-black: #000000;
+
+    /* Blue */
+    --blue-10: #F5F6FE;
+    --blue-20: #E5EBFC;
+    --blue-30: #D5E0FA;
+    --blue-40: #BDD0F8;
+    --blue-50: #9AB9F5;
+    --blue-60: #739EF2;
+    --blue-70: #4981F1;
+    --blue-80: #2D6CE9;
+    --blue-90: #2E5BB5;
+    --blue-100: #2C4E91;
+    --blue-110: #263C69;
+    --blue-120: #213254;
+    --blue-130: #1A263C;
+    --blue-140: #131A28;
+
+    /* Green */
+    --green-10: #F3F8F1;
+    --green-20: #E2EFE3;
+    --green-30: #D1E6D4;
+    --green-40: #B8D8BE;
+    --green-50: #92C49F;
+    --green-60: #69AD7F;
+    --green-70: #38965F;
+    --green-80: #25824F;
+    --green-90: #2A6B44;
+    --green-100: #29593B;
+    --green-110: #24432E;
+    --green-120: #203828;
+    --green-130: #19291E;
+    --green-140: #121D15;
+
+    /* Red */
+    --red-10: #FFF3F3;
+    --red-20: #FFE5E5;
+    --red-30: #FFD7D7;
+    --red-40: #FFC1C2;
+    --red-50: #FD9EA2;
+    --red-60: #F17B82;
+    --red-70: #E05663;
+    --red-80: #D03B4E;
+    --red-90: #A93542;
+    --red-100: #8B313A;
+    --red-110: #67292E;
+    --red-120: #542427;
+    --red-130: #3D1C1D;
+    --red-140: #2A1314;
+
+    /* Yellow */
+    --yellow-10: #FFF6ED;
+    --yellow-20: #FAE9D7;
+    --yellow-30: #F4DDC2;
+    --yellow-40: #EBCBA4;
+    --yellow-50: #DCB179;
+    --yellow-60: #CA954D;
+    --yellow-70: #B5781F;
+    --yellow-80: #9D681A;
+    --yellow-90: #7F571E;
+    --yellow-100: #6A4A1E;
+    --yellow-110: #4F391B;
+    --yellow-120: #413018;
+    --yellow-130: #302414;
+    --yellow-140: #21180E;
+
+    /* Orange */
+    --orange-10: #FFF4EE;
+    --orange-20: #FFE7DB;
+    --orange-30: #FFD8C5;
+    --orange-40: #FFC3A9;
+    --orange-50: #F7A480;
+    --orange-60: #E98457;
+    --orange-70: #D6632E;
+    --orange-90: #BC4C16;
+    --orange-100: #9D441A;
+    --orange-110: #833B1B;
+    --orange-130: #612F19;
+    --orange-140: #4C2716;
+    --orange-150: #3F2114;
+    --orange-160: #28150D;
+
+    /* Purple */
+    --purple-10: #FBF6FE;
+    --purple-20: #EEE8FD;
+    --purple-30: #E4DDFC;
+    --purple-40: #D5C9FB;
+    --purple-50: #BEADF9;
+    --purple-60: #A88EF8;
+    --purple-70: #946AF9;
+    --purple-90: #7F52E0;
+    --purple-100: #6A4BB5;
+    --purple-110: #584291;
+    --purple-130: #423468;
+    --purple-140: #342B51;
+    --purple-150: #2B2442;
+    --purple-160: #1B1728;
+
+    /* Teal */
+    --teal-10: #F3F8F6;
+    --teal-20: #E2EEEC;
+    --teal-30: #D0E5E2;
+    --teal-40: #B7D7D2;
+    --teal-50: #90C2BC;
+    --teal-60: #63ABA4;
+    --teal-70: #28938C;
+    --teal-90: #1C7B75;
+    --teal-100: #256964;
+    --teal-110: #265854;
+    --teal-130: #23423F;
+    --teal-140: #1E3533;
+    --teal-150: #1B2C2B;
+    --teal-160: #121C1A;
+
+    /* Editor Colors - Light Theme */
+    --editor-light-default-text: #000000;
+    --editor-light-error: #F50000;
+    --editor-light-warning: #FCF4D4;
+    --editor-light-link: #006DCC;
+    --editor-light-todo: #008DDE;
+    --editor-light-keyword: #0033B3;
+    --editor-light-method: #00627A;
+    --editor-light-constant: #871094;
+    --editor-light-string: #067D17;
+    --editor-light-number: #1750EB;
+    --editor-light-comment: #8C8C8C;
+    --editor-light-doc-comment: #8C8C8C;
+    --editor-light-annotation: #9E880D;
+    --editor-light-type-parameter: #007E8A;
+    --editor-light-implicit-param: #851691;
+    --editor-light-html-tag: #0033B3;
+
+    /* Editor Colors - Dark Theme */
+    --editor-dark-default-text: #BCBEC4;
+    --editor-dark-error: #F75464;
+    --editor-dark-warning: #F2C55C;
+    --editor-dark-link: #548AF7;
+    --editor-dark-todo: #8BB33D;
+    --editor-dark-keyword: #CF8E6D;
+    --editor-dark-method: #56A8F5;
+    --editor-dark-constant: #C77DBB;
+    --editor-dark-string: #6AAB73;
+    --editor-dark-number: #2AACB8;
+    --editor-dark-comment: #7A7E85;
+    --editor-dark-doc-comment: #5F826B;
+    --editor-dark-annotation: #B3AE60;
+    --editor-dark-type-parameter: #16BAAC;
+    --editor-dark-implicit-param: #C77DBB;
+    --editor-dark-html-tag: #D5B778;
+
+}
+
+/* Light Theme Semantic Colors - COMMENTED OUT */
+/*
+.theme-light {
+    --bg-primary: var(--gray-10);
+    --bg-secondary: var(--gray-20);
+    --bg-tertiary: var(--gray-30);
+    --bg-elevated: var(--gray-white);
+    --text-primary: var(--gray-black);
+    --text-secondary: var(--gray-70);
+    --text-muted: var(--gray-80);
+    --text-disabled: var(--gray-50);
+    --text-inverse: var(--gray-white);
+    --border-primary: var(--gray-30);
+    --border-secondary: var(--gray-20);
+    --border-control: var(--gray-40);
+    --border-control-disabled: var(--gray-30);
+    --border-raised: var(--gray-50);
+    --border-focus: var(--blue-80);
+    --accent-primary: var(--blue-80);
+    --accent-primary-hover: var(--blue-70);
+    --accent-primary-active: var(--blue-90);
+    --button-primary-bg: var(--blue-80);
+    --button-primary-bg-hover: var(--blue-70);
+    --button-primary-bg-active: var(--blue-60);
+    --button-primary-text: var(--gray-white);
+    --button-secondary-bg: var(--gray-white);
+    --button-secondary-bg-hover: var(--gray-50);
+    --button-secondary-bg-active: var(--gray-30);
+    --button-secondary-border: var(--gray-40);
+    --button-secondary-border-hover: var(--gray-50);
+    --button-secondary-border-active: var(--gray-80);
+    --button-secondary-text: var(--text-primary);
+    --tab-bg: transparent;
+    --tab-hover-bg: var(--bg-tertiary);
+    --tab-active-bg: var(--blue-30);
+    --tab-active-border: var(--blue-40);
+    --tab-active-text: var(--text-primary);
+    --icon-stroke: var(--gray-80);
+    --icon-secondary: var(--gray-70);
+    --icon-stroke-muted: var(--gray-50);
+    --stripe-icon-color: #6C707E;
+    --success-bg: var(--green-30);
+    --success-icon-fill: var(--green-10);
+    --success-icon-outline: var(--green-70);
+    --success-stripe: var(--green-50);
+    --file-color-green: var(--green-20);
+    --error-bg: var(--red-30);
+    --error-icon-fill: var(--red-10);
+    --error-icon-outline: var(--red-70);
+    --error-stripe: var(--red-50);
+    --file-color-rose: var(--red-20);
+    --warning-bg: var(--yellow-30);
+    --warning-icon-fill: var(--yellow-10);
+    --warning-icon-stroke: var(--yellow-70);
+    --warning-banner-stroke: var(--yellow-40);
+    --warning-text: var(--yellow-80);
+    --file-color-yellow: var(--yellow-20);
+    --info-icon-fill: var(--orange-10);
+    --info-icon-stroke: var(--orange-70);
+    --info-stripe: var(--orange-50);
+    --info-text: var(--orange-90);
+    --file-color-orange: var(--orange-20);
+    --highlight-icon-fill: var(--purple-10);
+    --highlight-icon-stroke: var(--purple-90);
+    --highlight-stripe: var(--purple-50);
+    --file-color-violet: var(--purple-20);
+    --teal-icon-fill: var(--teal-10);
+    --teal-icon-stroke: var(--teal-70);
+    --teal-stripe: var(--teal-50);
+    --teal-text: var(--teal-90);
+    --file-color-blue: var(--teal-20);
+    --control-bg: var(--gray-white);
+    --control-bg-hover: var(--gray-10);
+    --control-bg-pressed: var(--gray-30);
+    --control-bg-disabled: var(--gray-20);
+    --selection-bg: var(--blue-30);
+    --selection-bg-inactive: var(--gray-30);
+    --separator: var(--gray-30);
+    --separator-opaque: var(--gray-20);
+    --menu-bg: var(--gray-white);
+    --menu-item-selected-bg: var(--blue-30);
+    --popup-cell-bg-hover: var(--blue-30);
+    --popup-bg: var(--gray-white);
+    --popup-border: var(--border-primary);
+    --popup-separator: var(--separator);
+    --tooltip-bg: var(--gray-130);
+    --tooltip-text: var(--gray-white);
+    --link-text: var(--blue-80);
+    --link-text-hover: var(--blue-70);
+    --link-text-pressed: var(--blue-90);
+    --link-text-visited: var(--purple-90);
+    --input-bg: var(--gray-white);
+    --input-bg-disabled: var(--gray-10);
+    --input-border: var(--gray-40);
+    --input-border-hover: var(--gray-50);
+    --input-border-focus: var(--blue-80);
+    --input-border-error: var(--red-80);
+    --input-border-error-focus: var(--red-80);
+    --input-border-disabled: var(--gray-30);
+    --input-text: var(--text-primary);
+    --input-text-disabled: var(--text-disabled);
+    --input-text-placeholder: var(--text-muted);
+    --tree-node-text: var(--text-primary);
+    --tree-node-text-selected: var(--text-primary);
+    --tree-node-bg-hover: var(--gray-10);
+    --tree-node-bg-selected: var(--blue-30);
+    --tree-node-toggle: var(--text-secondary);
+    --tree-node-toggle-hover: var(--text-primary);
+    --tool-window-header-bg: var(--bg-elevated);
+    --tool-window-header-border: var(--border-secondary);
+    --tool-window-header-separator: var(--border-primary);
+    --tool-window-header-text: var(--text-primary);
+    --tool-window-action-icon: var(--icon-secondary);
+    --tool-window-action-icon-hover: var(--text-primary);
+    --tool-window-action-bg-hover: var(--bg-tertiary);
+    --tool-window-action-bg-active: var(--gray-30);
+    --tool-window-tab-text: var(--text-primary);
+    --tool-window-tab-bg-hover: var(--bg-tertiary);
+    --tool-window-tab-active-text: var(--text-primary);
+    --tool-window-tab-active-border: var(--blue-80);
+    --tool-window-tab-close: var(--icon-secondary);
+    --tool-window-tab-close-hover: var(--text-primary);
+    --tool-window-tab-close-bg-hover: var(--gray-30);
+    --tool-window-bg: var(--bg-elevated);
+    --tool-window-border: var(--border-secondary);
+    --tool-window-content-bg: var(--bg-elevated);
+    --tool-window-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --tool-window-scrollbar-track: var(--gray-10);
+    --tool-window-scrollbar-thumb: var(--gray-50);
+    --tool-window-scrollbar-thumb-hover: var(--gray-60);
+    --editor-default-text: var(--editor-light-default-text);
+    --editor-error: var(--editor-light-error);
+    --editor-warning: var(--editor-light-warning);
+    --editor-link: var(--editor-light-link);
+    --editor-todo: var(--editor-light-todo);
+    --editor-keyword: var(--editor-light-keyword);
+    --editor-method: var(--editor-light-method);
+    --editor-constant: var(--editor-light-constant);
+    --editor-string: var(--editor-light-string);
+    --editor-number: var(--editor-light-number);
+    --editor-comment: var(--editor-light-comment);
+    --editor-doc-comment: var(--editor-light-doc-comment);
+    --editor-annotation: var(--editor-light-annotation);
+    --editor-type-parameter: var(--editor-light-type-parameter);
+    --editor-implicit-param: var(--editor-light-implicit-param);
+    --editor-html-tag: var(--editor-light-html-tag);
+    --icon-button-hover-bg: #EBECF0;
+    --icon-button-pressed-bg: #DFE1E5;
+    --stripe-default-hover-bg: #EBECF0;
+    --stripe-selected-bg: #3574F0;
+    --stripe-selected-hover-bg: #3369D6;
+    --stripe-inactive-bg: #DFE1E5;
+    --stripe-inactive-hover-bg: #C9CCD6;
+    --stripe-badge-default: #55A76A;
+    --stripe-badge-selected: #FFFFFF;
+    --stripe-badge-inactive: #55A76A;
+    --text-white: #FFFFFF;
+    --text-tertiary: var(--gray-80);
+}
+*/
+
+/* Dark Theme Semantic Colors */
+.theme-dark {
+    /* Background Colors */
+    --bg-primary: var(--gray-140); /* D: bg L0 */
+    --bg-secondary: var(--gray-110); /* D: bg L1 */
+    --bg-tertiary: var(--gray-120); /* D: bg L2 */
+    --bg-elevated: var(--gray-130); /* D: bg L1 */
+
+    /* Text Colors */
+    --text-primary: var(--gray-30); /* D: text default */
+    --text-secondary: var(--gray-80); /* D: text sec */
+    --text-muted: var(--gray-60); /* D: text muted */
+    --text-disabled: var(--gray-90); /* D: text disabled */
+    --text-inverse: var(--gray-black);
+
+    /* Border Colors */
+    --border-primary: var(--gray-130); /* D: border L0 */
+    --border-secondary: var(--gray-100); /* D: border L2 */
+    --border-control: var(--gray-100); /* D: border control */
+    --border-control-disabled: var(--gray-110); /* D: border control disabled */
+    --border-raised: var(--gray-90); /* D: border control raised */
+    --border-focus: var(--blue-80); /* L,D: accent */
+
+    /* Interactive Colors */
+    --accent-primary: var(--blue-80); /* L,D: accent */
+    --accent-primary-hover: var(--blue-60); /* D: link */
+    --accent-primary-active: var(--blue-70); /* L: icon stroke, solid */
+    --accent-secondary: var(--blue-110); /* D: selection */
+
+    /* Button */
+    --button-primary-bg: var(--blue-80); /* D: accent */
+    --button-primary-bg-hover: var(--blue-70); /* D: accent hover */
+    --button-primary-bg-active: var(--blue-60); /* D: accent active */
+    --button-primary-text: var(--gray-white);
+    --button-secondary-bg: transparent;
+    --button-secondary-bg-hover: transparent;
+    --button-secondary-bg-active: var(--gray-120); /* D: bg tertiary */
+    --button-secondary-border: var(--gray-100); /* D: border control */
+    --button-secondary-border-hover: var(--gray-90); /* D: border raised */
+    --button-secondary-border-active: var(--gray-40); /* D: icon stroke */
+    --button-secondary-text: var(--text-primary);
+
+    /* Tab */
+    --tab-bg: transparent;
+    --tab-hover-bg: var(--bg-tertiary);
+    --tab-active-bg: var(--blue-110); /* D: selection */
+    --tab-active-border: var(--blue-100); /* D: icon fill, info bg */
+    --tab-active-text: var(--text-primary);
+
+    /* Icon Colors */
+    --icon-stroke: var(--gray-40); /* D: icon stroke */
+    --icon-secondary: var(--gray-80); /* D: icon sec */
+    --icon-stroke-muted: var(--gray-50); /* D: icon stroke muted */
+    --stripe-icon-color: #CED0D6; /* D: stripe icon color (Dark/Gray/Gray 11) */
+
+    /* Success/Green Colors */
+    --success-bg: var(--green-120); /* D: file color green, icon fill, success bg */
+    --success-icon: var(--green-60); /* D: icon success */
+    --success-icon-stroke: var(--green-70); /* D: icon stroke solid */
+    --file-color-green: var(--green-120); /* D: file color green */
+
+    /* Error/Red Colors */
+    --error-bg: var(--red-120); /* D: file color green, icon fill, success bg */
+    --error-icon: var(--red-60); /* D: icon success */
+    --error-icon-stroke: var(--red-70); /* D: icon stroke solid */
+    --file-color-rose: var(--red-120); /* D: file color rose */
+
+    /* Warning/Yellow Colors */
+    --warning-bg: var(--yellow-120); /* D: icon fill, file color yellow, warning bg */
+    --warning-icon-stroke: var(--yellow-50); /* D: icon stroke */
+    --warning-icon-outline: var(--yellow-40); /* D: icon solid outline */
+    --file-color-yellow: var(--yellow-120); /* D: file color yellow */
+
+    /* Info/Orange Colors */
+    --info-bg: var(--orange-130); /* D: icon fill, file color orange */
+    --info-icon-stroke: var(--orange-60); /* D: icon stroke solid */
+    --file-color-orange: var(--orange-130); /* D: file color orange */
+
+    /* Highlight/Purple Colors */
+    --highlight-bg: var(--purple-130); /* D: icon fill, file color orange */
+    --highlight-icon-stroke: var(--purple-60); /* D: icon stroke solid */
+    --highlight-icon-outline: var(--purple-70); /* D: icon stroke solid */
+    --highlight-icon-fill: var(--purple-150); /* D: icon fill */
+    --file-color-violet: var(--purple-140); /* D: file color violet */
+
+    /* Info/Teal Colors */
+    --teal-bg: var(--teal-130); /* D: icon fill, file color orange */
+    --teal-icon-stroke: var(--teal-60); /* D: icon stroke solid */
+    --teal-icon-outline: var(--teal-70); /* D: icon stroke solid */
+    --teal-icon-fill: var(--teal-140); /* D: icon fill, file color blue */
+    --file-color-blue: var(--teal-140); /* D: file color blue */
+
+    /* Control Colors */
+    --control-bg: var(--gray-120); /* D: bg control */
+    --control-bg-hover: var(--gray-110); /* D: bg control hover */
+    --control-bg-pressed: var(--gray-100); /* D: bg control pressed */
+    --control-bg-disabled: var(--gray-130); /* D: bg control disabled */
+
+    /* Selection Colors */
+    --selection-bg: var(--blue-110); /* D: selection */
+    --selection-bg-inactive: var(--gray-120); /* D: selection inactive */
+
+    /* Separator Colors */
+    --separator: var(--gray-120); /* D: separator */
+    --separator-opaque: var(--gray-130); /* D: separator opaque */
+
+    /* Menu Colors */
+    --menu-bg: var(--gray-130); /* D: menu bg */
+    --menu-item-selected-bg: var(--blue-110); /* D: menu item selected */
+
+    /* Popup Colors */
+    --popup-cell-bg-hover: var(--blue-110); /* D: popup cell hover */
+    --popup-bg: var(--gray-130); /* D: popup background */
+    --popup-border: var(--border-primary); /* D: popup border */
+    --popup-separator: var(--separator); /* D: popup separator */
+
+    /* Tooltip Colors */
+    --tooltip-bg: var(--gray-30); /* D: tooltip bg */
+    --tooltip-text: var(--gray-black); /* D: tooltip text */
+
+    /* Link Colors */
+    --link-text: var(--blue-60); /* D: link */
+    --link-text-hover: var(--blue-50); /* D: link hover */
+    --link-text-pressed: var(--blue-70); /* D: link pressed */
+    --link-text-visited: var(--purple-60); /* D: link visited */
+
+    /* Input Colors */
+    --input-bg: var(--gray-120); /* D: input background */
+    --input-bg-disabled: var(--gray-120); /* D: input background disabled */
+    --input-border: var(--gray-100); /* D: input border */
+    --input-border-hover: var(--gray-90); /* D: input border hover */
+    --input-border-focus: var(--blue-80); /* D: input border focus */
+    --input-border-error: var(--red-70); /* D: input border error */
+    --input-border-error-focus: var(--red-70); /* D: input border error focus */
+    --input-border-disabled: var(--gray-110); /* D: input border disabled */
+    --input-text: var(--text-primary); /* D: input text */
+    --input-text-disabled: var(--text-disabled); /* D: input text disabled */
+    --input-text-placeholder: var(--text-muted); /* D: input placeholder */
+
+    /* Tree Colors */
+    --tree-node-text: var(--text-primary); /* D: tree node text */
+    --tree-node-text-selected: var(--text-primary); /* D: tree node text selected */
+    --tree-node-bg-hover: var(--gray-130); /* D: tree node background hover */
+    --tree-node-bg-selected: var(--blue-110); /* D: tree node background selected */
+    --tree-node-toggle: var(--text-secondary); /* D: tree node toggle */
+    --tree-node-toggle-hover: var(--text-primary); /* D: tree node toggle hover */
+
+    /* Tool Window Header Colors */
+    --tool-window-header-bg: var(--bg-secondary); /* D: tool window header background */
+    --tool-window-header-border: var(--gray-120); /* D: tool window header border */
+    --tool-window-header-separator: var(--gray-120); /* D: tool window header separator */
+    --tool-window-header-text: var(--text-primary); /* D: tool window header text */
+    --tool-window-action-icon: var(--icon-secondary); /* D: tool window action icon */
+    --tool-window-action-icon-hover: var(--text-primary); /* D: tool window action icon hover */
+    --tool-window-action-bg-hover: var(--bg-tertiary); /* D: tool window action bg hover */
+    --tool-window-action-bg-active: var(--gray-110); /* D: tool window action bg active */
+    --tool-window-tab-text: var(--text-primary); /* D: tool window tab text */
+    --tool-window-tab-bg-hover: var(--bg-tertiary); /* D: tool window tab bg hover */
+    --tool-window-tab-active-text: var(--text-primary); /* D: tool window tab active text */
+    --tool-window-tab-active-border: var(--blue-80); /* D: tool window tab active border */
+    --tool-window-tab-close: var(--icon-secondary); /* D: tool window tab close */
+    --tool-window-tab-close-hover: var(--text-primary); /* D: tool window tab close hover */
+    --tool-window-tab-close-bg-hover: var(--gray-110); /* D: tool window tab close bg hover */
+
+    /* Tool Window Colors */
+    --tool-window-bg: #191A1C; /* D: tool window background */
+    --tool-window-border: var(--gray-120); /* D: tool window border */
+    --tool-window-content-bg: var(--bg-secondary); /* D: tool window content background */
+    --tool-window-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* D: tool window shadow */
+    --tool-window-scrollbar-track: var(--gray-130); /* D: tool window scrollbar track */
+    --tool-window-scrollbar-thumb: var(--gray-90); /* D: tool window scrollbar thumb */
+    --tool-window-scrollbar-thumb-hover: var(--gray-80); /* D: tool window scrollbar thumb hover */
+
+    /* Editor Semantic Colors - Dark Theme */
+    --editor-default-text: var(--editor-dark-default-text);
+    --editor-error: var(--editor-dark-error);
+    --editor-warning: var(--editor-dark-warning);
+    --editor-link: var(--editor-dark-link);
+    --editor-todo: var(--editor-dark-todo);
+    --editor-keyword: var(--editor-dark-keyword);
+    --editor-method: var(--editor-dark-method);
+    --editor-constant: var(--editor-dark-constant);
+    --editor-string: var(--editor-dark-string);
+    --editor-number: var(--editor-dark-number);
+    --editor-comment: var(--editor-dark-comment);
+    --editor-doc-comment: var(--editor-dark-doc-comment);
+    --editor-annotation: var(--editor-dark-annotation);
+    --editor-type-parameter: var(--editor-dark-type-parameter);
+    --editor-implicit-param: var(--editor-dark-implicit-param);
+    --editor-html-tag: var(--editor-dark-html-tag);
+
+    /* Icon Button States - Dark Theme (from Figma Int UI Kit) */
+    --icon-button-hover-bg: #393B40; /* Dark/Gray/Gray 3 */
+    --icon-button-pressed-bg: #4E5157; /* Dark/Gray/Gray 5 */
+
+    /* Stripe Button Colors - Dark Theme */
+    --stripe-default-hover-bg: #393B40; /* Dark/Gray/Gray 3 */
+    --stripe-selected-bg: #3574F0; /* Dark/Blue/Blue 6 (Primary) */
+    --stripe-selected-hover-bg: #467FF2; /* Dark/Blue/Blue 7 */
+    --stripe-inactive-bg: #4E5157; /* Dark/Gray/Gray 5 */
+    --stripe-inactive-hover-bg: #5A5D63; /* Dark/Gray/Gray 6 */
+    --stripe-badge-default: #5FAD65; /* Dark/Green/Green 7 (Primary) */
+    --stripe-badge-selected: #FFFFFF; /* Dark/Gray/Gray 14 (White) */
+    --stripe-badge-inactive: #5FAD65; /* Dark/Green/Green 7 (Primary) */
+    --text-white: #FFFFFF;
+    --text-tertiary: var(--gray-80);
+
+    /* Search - Dark Theme */
+    --search-bg: #2B2D30; /* Dark/Gray/Gray 2 */
+    --search-border: #4E5157; /* Dark/Gray/Gray 5 */
+    --search-border-focus: #3574F0; /* Dark/Blue/Blue 6 (Primary) */
+    --search-border-invalid: #5E3838; /* Dark/Red/Red 3 */
+    --search-border-invalid-focus: #DB5C5C; /* Dark/Red/Red 7 (Primary) */
+    --search-icon-color: #6F737A; /* Dark/Gray/Gray 7 */
+    --search-placeholder: #6F737A; /* Dark/Gray/Gray 7 */
+    --search-close-color: #6F737A; /* Dark/Gray/Gray 7 */
+    --search-close-hover-bg: rgba(240, 241, 242, 0.1); /* Subtle hover */
+    --search-close-hover-color: #868A91; /* Dark/Gray/Gray 8 */
+
+    /* Table - Dark Theme */
+    --table-bg: #2B2D30; /* Dark/Gray/Gray 2 */
+    --table-border: #393B40; /* Dark/Gray/Gray 3 */
+    --table-header-text: #DFE1E5; /* Dark/Gray/Gray 12 */
+    --table-cell-text: #DFE1E5; /* Dark/Gray/Gray 12 */
+    --table-row-hover-bg: #393B40; /* Dark/Gray/Gray 3 */
+    --table-row-selected-bg: #2E436E; /* Dark/Blue/Blue 3 */
+    --table-stripe-bg: #313335; /* Slightly lighter */
+    --table-toolbar-hover-bg: rgba(240, 241, 242, 0.1); /* Subtle hover */
+
+    /* Segmented Control - Dark Theme */
+    --segmented-control-border: #4E5157; /* Dark/Gray/Gray 5 */
+    --segmented-control-text: #DFE1E5; /* Dark/Gray/Gray 12 */
+    --segmented-control-selected-bg: #393B40; /* Dark/Gray/Gray 3 */
+    --segmented-control-selected-border: #6F737A; /* Dark/Gray/Gray 7 */
+    --segmented-control-selected-text: #DFE1E5; /* Dark/Gray/Gray 12 */
+    --segmented-control-hover-bg: rgba(57, 59, 64, 0.5); /* Subtle hover */
+    --segmented-control-disabled-border: #4E5157; /* Dark/Gray/Gray 5 */
+    --segmented-control-disabled-text: #868A91; /* Dark/Gray/Gray 8 */
+    --segmented-control-disabled-selected-bg: #4E5157; /* Dark/Gray/Gray 5 */
+    --segmented-control-disabled-selected-border: #4E5157; /* Dark/Gray/Gray 5 */
+    --segmented-control-focus-border: #3574F0; /* Dark/Blue/Blue 6 (Primary) */
+}

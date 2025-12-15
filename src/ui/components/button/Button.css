@@ -1,0 +1,63 @@
+.button {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.button-default {
+    padding: 6px 14px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+}
+
+.button-slim {
+    padding: 4px 11px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+}
+
+.button-primary {
+    background: var(--button-primary-bg);
+    color: var(--button-primary-text);
+}
+
+/* Hover state for primary */
+.button-primary:hover:not(:disabled) {
+    background: var(--button-primary-bg-hover);
+}
+
+/* Pressed state for primary */
+.button-primary:active:not(:disabled) {
+    background: var(--button-primary-bg-active);
+}
+
+.button-primary.button-disabled {
+    background: transparent;
+    color: var(--text-disabled);
+    border: 1px solid var(--border-control-disabled);
+    cursor: not-allowed;
+}
+
+.button-secondary {
+    background: var(--button-secondary-bg);
+    color: var(--text-primary);
+    border: 1px solid var(--button-secondary-border);
+}
+
+/* Hover state for secondary */
+.button-secondary:hover:not(:disabled) {
+    background: var(--button-secondary-bg-hover);
+    border: 1px solid var(--button-secondary-border-hover);
+}
+
+/* Pressed state for secondary */
+.button-secondary:active:not(:disabled) {
+    background: var(--button-secondary-bg-active);
+    border: 1px solid var(--button-secondary-border-active);
+}
+
+.button-secondary.button-disabled {
+    background: transparent;
+    color: var(--text-disabled);
+    border: 1px solid var(--border-control-disabled);
+    cursor: not-allowed;
+}

@@ -1,0 +1,232 @@
+/* 
+ * Tab Component - IntelliJ UI Kit Design
+ * 
+ * States:
+ * - default: opacity 0.67, no underline, no close button
+ * - default + hovered: opacity 1, close button appears
+ * - selected: opacity 1, blue underline, close button visible
+ * - inactive: opacity 1, gray underline, close button visible
+ * - disabled: opacity 0.67, no underline, no interaction
+ */
+
+.tab {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    flex-shrink: 0;
+    position: relative;
+    height: 40px;
+}
+
+.tab:disabled {
+    cursor: default;
+}
+
+/* Tab content container */
+.tab-content {
+    display: flex;
+    align-items: center;
+    padding: 12px 8px 12px 12px;
+    gap: 0;
+    flex: 1;
+}
+
+/* Inner content (icon + label) */
+.tab-content-inner {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding-right: 6px;
+}
+
+/* Icon styling */
+.tab-icon {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Label styling */
+.tab-label {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+    white-space: nowrap;
+    color: var(--text-primary);
+}
+
+/* Close button */
+.tab-close {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--icon-secondary);
+    border-radius: 4px;
+    transition: background 0.15s ease, opacity 0.15s ease;
+    opacity: 0;
+}
+
+/* Show close button on selected and inactive tabs */
+.tab-selected .tab-close,
+.tab-inactive .tab-close {
+    opacity: 1;
+}
+
+/* Show close button on hover for default tabs */
+.tab-default.tab-hovered .tab-close {
+    opacity: 1;
+}
+
+.tab-close:hover {
+    background: var(--control-bg-hover);
+    color: var(--icon-primary);
+}
+
+/* Underline indicator */
+.tab-underline {
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.tab-underline-selected {
+    background: var(--blue-primary, #3574F0);
+}
+
+.tab-underline-inactive {
+    background: var(--gray-8, #A8ADBD);
+}
+
+/* Dark theme inactive underline */
+.theme-dark .tab-underline-inactive {
+    background: var(--gray-6, #5A5D63);
+}
+
+/* ========================
+   STATE: Default
+   ======================== */
+.tab-default .tab-content {
+    opacity: 0.67;
+    padding: 12px 8px 12px 12px;
+}
+
+.tab-default.tab-hovered .tab-content {
+    opacity: 1;
+}
+
+/* ========================
+   STATE: Selected
+   ======================== */
+.tab-selected .tab-content {
+    opacity: 1;
+    padding: 12px 8px 8px 12px;
+}
+
+/* ========================
+   STATE: Inactive
+   ======================== */
+.tab-inactive .tab-content {
+    opacity: 1;
+    padding: 12px 8px 9px 12px;
+}
+
+/* ========================
+   STATE: Disabled
+   ======================== */
+.tab-disabled .tab-content {
+    opacity: 0.67;
+    padding: 12px 8px 12px 12px;
+}
+
+.tab-disabled {
+    pointer-events: none;
+}
+
+/* ========================
+   SIZE: Small
+   ======================== */
+.tab-small .tab-content {
+    padding: 8px 4px 8px 8px;
+}
+
+.tab-small.tab-selected .tab-content,
+.tab-small.tab-inactive .tab-content {
+    padding: 8px 4px 5px 8px;
+}
+
+.tab-small .tab-label {
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.tab-small .tab-content-inner {
+    gap: 3px;
+    padding-right: 4px;
+}
+
+/* ========================
+   VERTICAL TAB BAR
+   ======================== */
+.tab-bar-vertical .tab {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+}
+
+.tab-bar-vertical .tab-content {
+    flex: 1;
+    padding: 8px 12px;
+}
+
+.tab-bar-vertical .tab-underline {
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 0 2px 2px 0;
+}
+
+.tab-bar-vertical .tab-label {
+    flex: 1;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 256px;
+}
+
+/* ========================
+   HORIZONTAL TAB BAR
+   ======================== */
+.tab-bar-horizontal .tab-content {
+    padding: 12px 8px 12px 12px;
+}
+
+.tab-bar-horizontal .tab-selected .tab-content,
+.tab-bar-horizontal .tab-inactive .tab-content {
+    padding: 12px 8px 9px 12px;
+}
+
+/* ========================
+   SMALL HORIZONTAL TAB BAR
+   ======================== */
+.tab-bar-small .tab-content {
+    padding: 8px 4px 8px 8px;
+}
+
+.tab-bar-small .tab-selected .tab-content,
+.tab-bar-small .tab-inactive .tab-content {
+    padding: 8px 4px 5px 8px;
+}

@@ -1,0 +1,92 @@
+.link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0;
+    padding: 6px 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.15s ease;
+}
+
+.link-text {
+    font-family: Inter, sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    color: var(--link-text);
+}
+
+/* Default type - simple text link */
+.link-default .link-text {
+    color: var(--link-text);
+}
+
+.link-default:hover:not(.link-disabled) .link-text {
+    text-decoration: underline;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+/* Dropdown type - with chevron icon */
+.link-dropdown .link-text {
+    color: var(--link-text);
+}
+
+.link-dropdown:hover:not(.link-disabled) .link-text {
+    text-decoration: underline;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+/* External type - with external link icon */
+.link-external .link-text {
+    color: var(--link-text);
+}
+
+.link-external:hover:not(.link-disabled) .link-text {
+    text-decoration: underline;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+/* Disabled state */
+.link-disabled {
+    cursor: not-allowed;
+}
+
+.link-disabled .link-text {
+    color: var(--text-disabled);
+}
+
+.link-disabled .link-icon {
+    opacity: 0.5;
+}
+
+/* Icon styling */
+.link-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+}
+
+.link-icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Icon colors */
+.link-default .link-icon,
+.link-dropdown .link-icon,
+.link-external .link-icon {
+    color: var(--icon-secondary);
+}
+
+.link-disabled .link-icon {
+    color: var(--text-disabled);
+}
+

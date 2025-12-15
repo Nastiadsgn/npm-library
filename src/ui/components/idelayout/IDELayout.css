@@ -1,0 +1,331 @@
+/* 
+ * IDELayout Component - Unified IDE Window Layout
+ * 
+ * Themes:
+ * - default: Traditional flat layout with solid borders
+ * - island: Modern design with rounded panels and gaps
+ */
+
+/* ============================================
+   BASE STYLES (shared between themes)
+   ============================================ */
+
+.ide-layout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+    overflow: hidden;
+}
+
+/* Main Content Area (stripes + center) */
+.ide-layout-content {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+}
+
+/* Vertical Stripes */
+.ide-layout-stripe {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 0 8px 0;
+    width: 40px;
+    flex-shrink: 0;
+}
+
+.ide-layout-stripe-right {
+    padding-bottom: 6px;
+}
+
+/* Stripe Sections */
+.stripe-section-top {
+    flex: 0 0 auto;
+}
+
+.stripe-section-bottom {
+    flex: 0 0 auto;
+    margin-top: auto;
+}
+
+/* Center Content Area */
+.ide-layout-center {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+}
+
+/* Top Row (Tool Windows + Editor) */
+.ide-layout-top-row {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+}
+
+/* Tool Window overrides */
+.ide-layout-tool-window {
+    flex-shrink: 0;
+}
+
+.ide-layout-tool-window-left {
+    width: 280px !important;
+    height: auto !important;
+}
+
+.ide-layout-tool-window-right {
+    width: 320px !important;
+    height: auto !important;
+}
+
+.ide-layout-tool-window-bottom {
+    width: 100% !important;
+    flex-shrink: 0;
+}
+
+/* Editor Area */
+.ide-layout-editor-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.ide-layout-editor-tabs {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 0 4px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    flex-shrink: 0;
+}
+
+.ide-layout-editor-tabs .tab-bar {
+    background: transparent;
+}
+
+.ide-layout .tab-bar {
+    background: transparent;
+}
+
+.ide-layout-editor-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.ide-layout-editor-content {
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.ide-layout-editor-content .code-example {
+    flex: 1;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+}
+
+.ide-layout-editor-content .code-example .code-input-container {
+    flex: 1;
+    height: 100%;
+}
+
+.ide-layout-editor-content .code-example .code-input {
+    height: 100%;
+}
+
+/* ============================================
+   DEFAULT THEME - Traditional flat layout
+   ============================================ */
+
+.ide-layout-default {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-primary);
+    border-radius: 8px;
+    box-shadow: var(--tool-window-shadow);
+}
+
+.ide-layout-default .main-toolbar {
+    flex-shrink: 0;
+    border-radius: 8px 8px 0 0;
+}
+
+.ide-layout-default .ide-layout-content {
+    gap: 0;
+}
+
+.ide-layout-default .ide-layout-center {
+    gap: 0;
+}
+
+.ide-layout-default .ide-layout-top-row {
+    gap: 0;
+}
+
+/* Default theme stripes */
+.ide-layout-default .ide-layout-stripe {
+    background: var(--gray-130);
+}
+
+.ide-layout-default .ide-layout-stripe-left {
+    border-right: 1px solid var(--gray-140);
+}
+
+.ide-layout-default .ide-layout-stripe-right {
+    border-left: 1px solid var(--gray-140);
+}
+
+.ide-layout-default .stripe-container {
+    background: transparent;
+    border: none;
+}
+
+/* Default theme tool windows */
+.ide-layout-default .ide-layout-tool-window {
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.ide-layout-default .ide-layout-tool-window-left {
+    border-right: 1px solid var(--border-primary);
+}
+
+.ide-layout-default .ide-layout-tool-window-right {
+    border-left: 1px solid var(--border-primary);
+}
+
+.ide-layout-default .ide-layout-tool-window-bottom {
+    border-top: 1px solid var(--border-primary);
+}
+
+/* Default theme editor */
+.ide-layout-default .ide-layout-editor-area {
+    background: var(--bg-elevated);
+}
+
+.ide-layout-default .ide-layout-editor-tabs {
+    background: var(--gray-140);
+    border-bottom: 1px solid var(--border-primary);
+}
+
+.ide-layout-default .ide-layout-editor-content {
+    background: var(--gray-140);
+}
+
+/* Default theme status bar */
+.ide-layout-default .status-bar {
+    border-top: 1px solid var(--border-primary);
+}
+
+/* ============================================
+   ISLAND THEME - Modern design with rounded panels
+   ============================================ */
+
+.ide-layout-island {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0.12) 100%), 
+                linear-gradient(90deg, #2B2D30 0%, #2B2D30 100%);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ide-layout-island .main-toolbar {
+    flex-shrink: 0;
+    border-bottom: none;
+    background: transparent;
+}
+
+.ide-layout-island .ide-layout-content {
+    gap: 1px;
+}
+
+.ide-layout-island .ide-layout-center {
+    gap: 4px;
+    border-radius: 10px;
+}
+
+.ide-layout-island .ide-layout-top-row {
+    gap: 4px;
+}
+
+/* Island theme stripes */
+.ide-layout-island .ide-layout-stripe {
+    background: transparent;
+}
+
+.ide-layout-island .stripe-container {
+    background: transparent;
+}
+
+/* Island theme tool windows */
+.ide-layout-island .ide-layout-tool-window {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.ide-layout-island .ide-layout-tool-window-bottom {
+    height: 180px !important;
+}
+
+/* Island theme editor */
+.ide-layout-island .ide-layout-editor-area {
+    background: #17181A;
+    border-radius: 10px;
+}
+
+.ide-layout-island .ide-layout-editor-tabs {
+    background: transparent;
+    border-bottom: 1px solid var(--border-primary);
+}
+
+.ide-layout-island .ide-layout-editor-content {
+    background: transparent;
+}
+
+/* Island theme status bar */
+.ide-layout-island .status-bar {
+    border-top: none;
+    background: transparent;
+}
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================ */
+
+@media (max-width: 1200px) {
+    .ide-layout-tool-window-right {
+        width: 260px !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .ide-layout-tool-window-left {
+        width: 220px !important;
+    }
+    
+    .ide-layout-tool-window-right {
+        display: none;
+    }
+    
+    .ide-layout-stripe-right {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .ide-layout-tool-window-left {
+        display: none;
+    }
+    
+    .ide-layout-stripe-left {
+        display: none;
+    }
+}
+

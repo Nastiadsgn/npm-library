@@ -1,0 +1,43 @@
+/* 
+ * TabBar Component - IntelliJ UI Kit Design
+ */
+
+.tab-bar {
+    background: transparent;
+    padding: 0;
+    position: relative;
+}
+
+/* Horizontal tab bar */
+.tab-bar-horizontal {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    border-bottom: 1px solid var(--border-primary, #393B40);
+}
+
+.tab-bar-horizontal.tab-bar-wrap {
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 0;
+}
+
+/* Vertical tab bar */
+.tab-bar-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 4px;
+    border-right: 1px solid var(--border-primary, #393B40);
+}
+
+/* Small tab bar */
+.tab-bar-small {
+    /* Inherits from horizontal or vertical */
+}
+
+.tab-bar-small.tab-bar-horizontal {
+    height: auto;
+}

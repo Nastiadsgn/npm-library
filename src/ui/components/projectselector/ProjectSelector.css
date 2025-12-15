@@ -1,0 +1,146 @@
+.project-selector-container {
+    position: relative;
+    display: inline-block;
+}
+
+.project-selector {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 6px 5px;
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-primary);
+    min-width: 0;
+}
+
+.project-selector-hovered {
+    background: var(--control-bg-hover);
+}
+
+.project-selector-pressed {
+    background: var(--control-bg-hover);
+}
+
+.project-selector-content {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex: 1;
+    min-width: 0;
+}
+
+.project-icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+
+.project-icon-background {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #3574f0, #7a64f0);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.project-icon-text {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+    line-height: 1;
+    text-align: center;
+}
+
+.project-text-dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    flex: 1;
+    min-width: 0;
+}
+
+.project-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+    color: inherit;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chevron-down {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--icon-secondary);
+    transition: transform 0.2s ease;
+}
+
+.project-selector-hovered .chevron-down,
+.project-selector-pressed .chevron-down {
+    transform: rotate(180deg);
+}
+
+.chevron-down svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Project icon in popup cells */
+.popup-cell .project-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Different project icon colors - from Figma design */
+.project-icon-amber .project-icon-background {
+    background: linear-gradient(to bottom, #e08855, #e9806f);
+}
+
+.project-icon-rust .project-icon-background {
+    background: linear-gradient(to bottom, #ea580c, #dc2626);
+}
+
+.project-icon-olive .project-icon-background {
+    background: linear-gradient(to bottom, #a1a359, #87aa59);
+}
+
+.project-icon-grass .project-icon-background {
+    background: linear-gradient(to bottom, #5fad65, #3d968b);
+}
+
+.project-icon-ocean .project-icon-background {
+    background: linear-gradient(to bottom, #24a394, #279ccd);
+}
+
+.project-icon-sky .project-icon-background {
+    background: linear-gradient(to bottom, #0ea5e9, #0284c7);
+}
+
+.project-icon-cobalt .project-icon-background {
+    background: linear-gradient(to bottom, #3574f0, #7a64f0);
+}
+
+.project-icon-violet .project-icon-background {
+    background: linear-gradient(to bottom, #874ece, #963dcc);
+}
+
+.project-icon-plum .project-icon-background {
+    background: linear-gradient(to bottom, #d946ef, #c026d3);
+}

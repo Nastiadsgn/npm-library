@@ -1,0 +1,102 @@
+/* StatusBar Progress Component */
+
+.status-bar-progress {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    height: 16px;
+}
+
+.status-bar-progress-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.status-bar-progress-track {
+    width: 150px;
+    height: 4px;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.status-bar-progress-fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+/* Indeterminate animation */
+.status-bar-progress-fill.indeterminate {
+    width: 30%;
+    animation: indeterminate-progress 1.5s ease-in-out infinite;
+}
+
+@keyframes indeterminate-progress {
+    0% {
+        left: 0;
+        width: 30%;
+    }
+    50% {
+        left: 35%;
+        width: 50%;
+    }
+    100% {
+        left: 70%;
+        width: 30%;
+    }
+}
+
+.status-bar-progress-stop {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    border: none;
+    padding: 0;
+    transition: background-color 0.15s ease;
+}
+
+.status-bar-progress-stop-icon {
+    width: 8px;
+    height: 8px;
+    border-radius: 1px;
+}
+
+/* ===== Dark Theme ===== */
+.theme-dark .status-bar-progress-label {
+    color: #6F737A; /* Dark/Gray/Gray 7 */
+}
+
+.theme-dark .status-bar-progress-track {
+    background: #43454A; /* Dark/Gray/Gray 4 */
+}
+
+.theme-dark .status-bar-progress-fill {
+    background: #3574F0; /* Dark/Blue/Blue 6 (Primary) */
+}
+
+.theme-dark .status-bar-progress-stop {
+    background: #393B40; /* Dark/Gray/Gray 3 */
+}
+
+.theme-dark .status-bar-progress-stop:hover {
+    background: #43454A; /* Dark/Gray/Gray 4 */
+}
+
+.theme-dark .status-bar-progress-stop-icon {
+    background: #868A91; /* Dark/Gray/Gray 8 */
+}

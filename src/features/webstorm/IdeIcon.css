@@ -1,0 +1,92 @@
+/* IDE Icon Component */
+.ide-icon {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.ide-icon-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Fallback styles (CSS gradient approach) */
+.ide-icon-fallback {
+    display: inline-block;
+}
+
+.ide-icon-logo {
+    position: absolute;
+    inset: 0;
+}
+
+.ide-icon-inner {
+    position: absolute;
+    background: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 10%;
+    box-sizing: border-box;
+}
+
+.ide-icon-letters {
+    font-family: 'JetBrains Mono', 'SF Mono', 'Monaco', 'Menlo', monospace;
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.ide-icon-underscore {
+    background: #FFFFFF;
+    margin-top: 4%;
+}
+
+/* Badges */
+.ide-icon-badge {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.ide-icon-eap {
+    background: #FDB60D;
+    color: #000000;
+    bottom: 0;
+    left: 25%;
+    right: 0;
+    height: 37.5%;
+    border-radius: 2px;
+    font-size: 4px;
+}
+
+.ide-icon-preview {
+    background: #FDB60D;
+    color: #000000;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 31.25%;
+    border-radius: 2px;
+    font-size: 3px;
+}
+
+/* macOS specific styles */
+.ide-icon-macos .ide-icon-eap {
+    border-radius: 4px;
+}
+
+.ide-icon-macos .ide-icon-preview {
+    border-radius: 0 0 4px 4px;
+}

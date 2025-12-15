@@ -1,0 +1,85 @@
+/* StatusBar Component */
+
+.status-bar {
+    position: relative;
+    width: 100%;
+    height: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.status-bar-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+}
+
+.status-bar-breadcrumbs {
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.status-bar-chevron {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.status-bar-chevron svg {
+    width: 7px;
+    height: 7px;
+}
+
+.status-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-shrink: 0;
+    padding-right: 8px;
+}
+
+.status-bar-progress-container {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+/* Compact progress bar for status bar */
+.status-bar-progress-container .progress-bar-container {
+    gap: 8px;
+}
+
+.status-bar-progress-container .progress-bar-track {
+    width: 150px;
+    min-width: 150px;
+}
+
+.status-bar-widgets {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+/* ===== Dark Theme ===== */
+.theme-dark .status-bar {
+    background: #2B2D30; /* Dark/Gray/Gray 2 */
+}
+
+.theme-dark .status-bar-border {
+    background: #1E1F22; /* Dark/Gray/Gray 1 (Primary) */
+}
+
+.theme-dark .status-bar-chevron svg {
+    fill: #9DA0A8; /* Dark/Gray/Gray 9 */
+}

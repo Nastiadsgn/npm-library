@@ -1,0 +1,97 @@
+/* Toolbar Icon Button Component
+ * Following IntelliJ UI Guidelines & Int UI Kit Figma specs
+ * https://plugins.jetbrains.com/docs/intellij/icon-button.html
+ */
+
+.toolbar-icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    padding: 5px; /* (26 - 16) / 2 = 5px around 16px icon */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--icon-secondary);
+    position: relative;
+}
+
+/* State background layer - positioned with 2px inset per Figma specs */
+.toolbar-icon-button::before {
+    content: '';
+    position: absolute;
+    inset: 2px; /* 2px inset creates 22x22px bg inside 26x26px button */
+    border-radius: 3px; /* Figma spec: 3px radius */
+    background: transparent;
+    transition: background-color 0.15s ease;
+    z-index: 0;
+}
+
+/* Icon layer above background */
+.toolbar-icon-button .icon {
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+}
+
+/* Hover State - Figma specs:
+ * Light: #EBECF0 (Gray 12)
+ * Dark: #393B40 (Gray 3)
+ */
+.toolbar-icon-button:hover:not(:disabled)::before {
+    background: var(--icon-button-hover-bg, #EBECF0);
+}
+
+.toolbar-icon-button:hover:not(:disabled) {
+    color: var(--text-primary);
+}
+
+/* Active/Pressed State */
+.toolbar-icon-button:active:not(:disabled)::before {
+    background: var(--icon-button-pressed-bg, #DFE1E5);
+}
+
+/* Focus State */
+.toolbar-icon-button:focus-visible {
+    outline: 2px solid var(--border-focus);
+    outline-offset: 1px;
+}
+
+/* Disabled State */
+.toolbar-icon-button:disabled,
+.toolbar-icon-button-disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    color: var(--text-disabled);
+}
+
+.toolbar-icon-button:disabled:hover::before {
+    background: transparent;
+}
+
+/* Toggle Type - Toggled/Selected State */
+.toolbar-icon-button-toggle.toolbar-icon-button-toggled::before {
+    background: var(--selection-bg);
+}
+
+.toolbar-icon-button-toggle.toolbar-icon-button-toggled {
+    color: var(--text-primary);
+}
+
+.toolbar-icon-button-toggle.toolbar-icon-button-toggled:hover::before {
+    background: var(--tab-active-bg);
+}
+
+/* Badge for Filter Actions */
+.toolbar-icon-button-badge::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 6px;
+    height: 6px;
+    background: var(--accent-primary);
+    border-radius: 50%;
+    z-index: 2;
+}

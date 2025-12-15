@@ -1,0 +1,198 @@
+.ide-window {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 600px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-primary);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--tool-window-shadow);
+}
+
+/* Fullscreen IDE Window - fills entire content area */
+.ide-window-fullscreen {
+    height: 100%;
+    border: 1px solid var(--border-primary);
+    border-radius: 8px;
+    box-shadow: none;
+}
+
+/* Main Toolbar Override */
+.ide-window .main-toolbar {
+    flex-shrink: 0;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Main Content Area */
+.ide-content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* Stripe Containers */
+.ide-stripe-left,
+.ide-stripe-right {
+    flex-shrink: 0;
+    height: 100%;
+}
+
+.ide-stripe-left .stripe-container {
+    border-radius: 0;
+    border-right: 1px solid var(--border-primary);
+}
+
+.ide-stripe-right .stripe-container {
+    border-radius: 0;
+    border-left: 1px solid var(--border-primary);
+}
+
+/* Left Panel */
+.ide-left-panel {
+    width: 280px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--border-primary);
+    background: var(--bg-elevated);
+}
+
+.ide-left-panel .ide-tool-window {
+    width: 100% !important;
+    height: 100% !important;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.ide-left-panel .tool-window {
+    width: 100% !important;
+    height: 100% !important;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Right Panel */
+.ide-right-panel {
+    width: 250px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid var(--border-primary);
+    background: var(--bg-elevated);
+}
+
+.ide-right-panel .ide-tool-window {
+    width: 100% !important;
+    height: 100% !important;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.ide-right-panel .tool-window {
+    width: 100% !important;
+    height: 100% !important;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Editor Area */
+.ide-editor-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background: var(--bg-elevated);
+}
+
+/* Editor Tabs */
+.ide-editor-tabs {
+    flex-shrink: 0;
+    height: 40px;
+    background: var(--gray-140);
+    border-bottom: 1px solid var(--border-primary);
+    padding: 0 8px;
+}
+
+.ide-editor-tabs .tab-bar {
+    background: transparent;
+}
+
+/* Editor Content */
+.ide-editor-content {
+    flex: 1;
+    overflow: auto;
+    background: var(--gray-140);
+}
+
+.ide-editor-content .component-examples-vertical {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.ide-editor-content .code-example {
+    height: 100%;
+    border: none;
+    border-radius: 0;
+    background: var(--gray-140);
+}
+
+.ide-editor-content .code-example textarea {
+    background: var(--gray-140);
+}
+
+/* Status Bar */
+.ide-status-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 24px;
+    padding: 0 12px;
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-primary);
+    font-size: 11px;
+    color: var(--text-secondary);
+    flex-shrink: 0;
+}
+
+.status-bar-left,
+.status-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.status-item {
+    white-space: nowrap;
+}
+
+/* Tool Window Overrides for IDE Layout */
+.ide-tool-window {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .ide-left-panel {
+        width: 220px;
+    }
+    
+    .ide-right-panel {
+        width: 200px;
+    }
+}
+
+@media (max-width: 700px) {
+    .ide-left-panel,
+    .ide-right-panel {
+        display: none;
+    }
+}
+

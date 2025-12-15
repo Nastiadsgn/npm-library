@@ -1,0 +1,75 @@
+/* Dialog Overlay */
+.dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.dialog-overlay-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Dialog Container */
+.dialog {
+    background-color: #2B2D30; /* Dark/Gray/Gray 2 */
+    border: 0.5px solid #393B40; /* Dark/Gray/Gray 3 */
+    border-radius: 8px;
+    box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow: hidden;
+    position: relative;
+    animation: dialogSlideIn 0.2s ease;
+}
+
+@keyframes dialogSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Dialog Content */
+.dialog-content {
+    flex: 1;
+    overflow: auto;
+    padding: 20px;
+    min-height: 0;
+}
+
+/* Scrollbar styling for content */
+.dialog-content::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.dialog-content::-webkit-scrollbar-track {
+    background: #2B2D30;
+}
+
+.dialog-content::-webkit-scrollbar-thumb {
+    background: #4E5157;
+    border-radius: 5px;
+}
+
+.dialog-content::-webkit-scrollbar-thumb:hover {
+    background: #5A5D63;
+}
+

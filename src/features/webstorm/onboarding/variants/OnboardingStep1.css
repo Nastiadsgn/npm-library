@@ -1,0 +1,905 @@
+/* Multistep Wizard - Welcome Screen */
+.multistep-wizard {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 900px;
+    height: 100%;
+    min-height: 600px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0.12) 100%), 
+                linear-gradient(90deg, #2B2D30 0%, #2B2D30 100%);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Main Toolbar */
+.wizard-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    padding: 0 16px;
+    flex-shrink: 0;
+}
+
+.wizard-toolbar .toolbar-left-side {
+    display: flex;
+    align-items: center;
+}
+
+.wizard-toolbar .toolbar-right-side {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+/* macOS Window Controls */
+.wizard-toolbar .window-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.wizard-toolbar .window-control {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.wizard-toolbar .window-control.close {
+    background: #FF5F56;
+}
+
+.wizard-toolbar .window-control.minimize {
+    background: #FFBD2E;
+}
+
+.wizard-toolbar .window-control.maximize {
+    background: #27C93F;
+}
+
+/* Toolbar Icon Buttons */
+.wizard-toolbar .toolbar-icon-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.15s ease;
+}
+
+.wizard-toolbar .toolbar-icon-button:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.wizard-toolbar .toolbar-icon-button .icon {
+    opacity: 0.8;
+}
+
+/* Main Content Area */
+.wizard-content {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+    gap: 1px;
+}
+
+/* Vertical Stripes */
+.wizard-stripe {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 0 8px 0;
+    background: transparent;
+}
+
+.wizard-stripe-left {
+    width: 40px;
+    flex-shrink: 0;
+}
+
+.wizard-stripe-right {
+    width: 40px;
+    flex-shrink: 0;
+    padding-bottom: 6px;
+}
+
+/* Stripe Sections */
+.wizard-stripe .stripe-section-top {
+    flex: 0 0 auto;
+}
+
+.wizard-stripe .stripe-section-bottom {
+    flex: 0 0 auto;
+    margin-top: auto;
+}
+
+/* Center Content Area */
+.wizard-center {
+    flex: 1;
+    min-width: 0;
+    min-height: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Editor - fixed height, scrollable content area */
+.wizard-center .editor {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #17181A;
+}
+
+/* Background Gradient Effects */
+.wizard-bg-effects {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.wizard-bg-ellipse {
+    position: absolute;
+    width: 780px;
+    height: 780px;
+    border-radius: 50%;
+    filter: blur(200px);
+    opacity: 0.5;
+}
+
+.wizard-bg-ellipse-1 {
+    left: -288px;
+    top: -32px;
+    background: radial-gradient(circle, rgba(1, 125, 254, 0.4) 0%, transparent 70%); /* #017DFE */
+}
+
+.wizard-bg-ellipse-2 {
+    left: 550px;
+    top: -347px;
+    background: radial-gradient(circle, rgba(240, 235, 24, 0.3) 0%, transparent 70%); /* #F0EB18 */
+}
+
+.wizard-bg-ellipse-3 {
+    left: 765px;
+    top: 548px;
+    background: radial-gradient(circle, rgba(1, 196, 244, 0.3) 0%, transparent 70%); /* #01C4F4 */
+}
+
+/* Welcome Content */
+.wizard-welcome-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    padding: 40px;
+    margin: auto 0;
+}
+
+/* WebStorm Icon */
+.wizard-icon {
+    margin-bottom: 16px;
+}
+
+/* Welcome Title */
+.wizard-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #DFE1E5;
+    margin: 0;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+/* Subtitle */
+.wizard-subtitle {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #DFE1E5;
+    margin: 0;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+/* Get Started Button */
+.wizard-get-started-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 24px;
+    min-width: 96px;
+    background: #3574F0;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+    margin-bottom: 16px;
+}
+
+.wizard-get-started-btn:hover {
+    background: #4A8AF4;
+}
+
+.wizard-get-started-btn:active {
+    background: #2E68D9;
+}
+
+/* Skip Link */
+.wizard-skip-link {
+    background: transparent;
+    border: none;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #6B9BFA;
+    cursor: pointer;
+    transition: color 0.15s ease;
+    padding: 4px 8px;
+}
+
+.wizard-skip-link:hover {
+    color: #8BB4FB;
+    text-decoration: underline;
+}
+
+/* Override StripeContainer for Wizard */
+.multistep-wizard .stripe-container {
+    background: transparent;
+}
+
+/* Override StatusBar for Wizard */
+.multistep-wizard .status-bar {
+    flex-shrink: 0;
+    border-top: none;
+    background: transparent;
+}
+
+/* ==================== */
+/* Import Step (Step 2) */
+/* ==================== */
+
+.wizard-import-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    padding: 40px;
+    margin: auto 0;
+}
+
+.wizard-import-subtitle {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #DFE1E5;
+    margin: 0;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+/* Import Buttons Container */
+.wizard-import-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 265px;
+    margin-bottom: 24px;
+}
+
+/* Import Button */
+.wizard-import-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 10px 24px;
+    background: transparent;
+    border: 1px solid #4E5157;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.wizard-import-btn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: #6E7177;
+}
+
+.wizard-import-btn:active {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Import Button Icons Container */
+.import-btn-icons {
+    display: flex;
+    gap: 4px;
+}
+
+/* Scaled icons (24px → 16px) for better quality */
+.import-btn-icons-scaled .ide-icon {
+    width: 16px !important;
+    height: 16px !important;
+}
+
+.import-btn-icons-scaled .ide-icon img {
+    width: 16px !important;
+    height: 16px !important;
+}
+
+/* Import Button Text */
+.import-btn-text {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #DFE1E5;
+    white-space: nowrap;
+}
+
+/* Import Button Chevron */
+.import-btn-chevron {
+    opacity: 0.6;
+}
+
+/* Import Button Icon */
+.import-btn-icon {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.import-btn-icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* VS Code Icon specific */
+.import-btn-icon.vscode-icon svg {
+    width: 14px;
+    height: 14px;
+}
+
+/* Cursor Icon specific */
+.import-btn-icon.cursor-icon svg {
+    width: 14px;
+    height: 14px;
+    border-radius: 2px;
+}
+
+/* ============================= */
+/* Out of Box Step (Step 3)      */
+/* ============================= */
+
+.wizard-outofbox-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    padding: 40px;
+    margin: auto 0;
+}
+
+/* Feature Icons Row */
+.wizard-feature-icons {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.wizard-feature-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+}
+
+.wizard-feature-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.feature-icon-text {
+    font-family: 'JetBrains Mono', 'SF Mono', monospace;
+    font-weight: 700;
+    font-size: 10.25px;
+    color: #DFE1E5;
+    text-transform: uppercase;
+}
+
+.wizard-outofbox-subtitle {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #DFE1E5;
+    margin: 0;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+/* ============================= */
+/* Customize Step (Step 4)       */
+/* ============================= */
+
+.wizard-customize-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    padding: 40px;
+    margin: auto 0;
+    width: 100%;
+    max-width: 500px;
+}
+
+.wizard-customize-content .wizard-title {
+    margin-bottom: 24px;
+}
+
+/* Accordion */
+.wizard-accordion {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.accordion-item {
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+}
+
+/* Accordion Header */
+.accordion-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    height: 48px;
+    padding: 0 12px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.accordion-header:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+/* Accordion Checkbox */
+.accordion-checkbox {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #5A5D63;
+    border-radius: 3px;
+    background: #2B2D30;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.accordion-checkbox-checked {
+    background: #3574F0;
+    border-color: #3574F0;
+    cursor: pointer;
+}
+
+.accordion-checkbox-checked:hover {
+    background: #4A8AF4;
+    border-color: #4A8AF4;
+}
+
+/* Accordion Label */
+.accordion-label {
+    flex: 1;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #DFE1E5;
+    text-align: left;
+}
+
+/* Accordion Chevron */
+.accordion-chevron {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+    opacity: 0.6;
+}
+
+.accordion-chevron-down {
+    transform: rotate(90deg);
+}
+
+/* Accordion Content */
+.accordion-content {
+    padding: 0 12px 12px 36px;
+}
+
+.accordion-description {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #9DA0A8;
+    margin: 0 0 12px 0;
+}
+
+/* Theme Options */
+.theme-options {
+    display: flex;
+    gap: 16px;
+}
+
+.editor-scheme-options {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 16px;
+    justify-content: start;
+}
+
+.theme-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.theme-preview {
+    width: 88px;
+    height: 48px;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #4E5157;
+    transition: border-color 0.15s ease, border-width 0.15s ease;
+}
+
+.theme-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.theme-option-selected .theme-preview {
+    border: 2px solid #3574F0;
+}
+
+.theme-option:hover:not(.theme-option-selected) .theme-preview {
+    border-color: #6F737A;
+}
+
+.theme-label {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #9DA0A8;
+}
+
+.theme-option-selected .theme-label {
+    color: #DFE1E5;
+}
+
+/* Scale Options */
+.scale-options,
+.scheme-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.scale-option,
+.scheme-option {
+    padding: 6px 12px;
+    background: transparent;
+    border: 1px solid #4E5157;
+    border-radius: 4px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: #B4B8BF;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.scale-option:hover,
+.scheme-option:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: #6F737A;
+}
+
+.scale-option-selected,
+.scheme-option-selected {
+    background: #3574F0;
+    border-color: #3574F0;
+    color: #FFFFFF;
+}
+
+.scale-option-selected:hover,
+.scheme-option-selected:hover {
+    background: #4A8AF4;
+    border-color: #4A8AF4;
+}
+
+/* Keymap Section */
+.accordion-keymap-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.keymap-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.keymap-btn {
+    padding: 6px 12px;
+    background: transparent;
+    border: 1px solid #4E5157;
+    border-radius: 4px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #DFE1E5;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.keymap-btn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: #6F737A;
+}
+
+.keymap-btn-selected {
+    background: #3574F0;
+    border-color: #3574F0;
+    color: #FFFFFF;
+}
+
+.keymap-btn-selected:hover {
+    background: #4A8AF4;
+    border-color: #4A8AF4;
+}
+
+/* Shortcuts List */
+.keymap-shortcuts {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.shortcut-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.shortcut-item .icon {
+    opacity: 0.6;
+}
+
+.shortcut-action {
+    flex: 1;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #DFE1E5;
+}
+
+.shortcut-keys {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.shortcut-prefix {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: #DFE1E5;
+}
+
+.shortcut-key {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 18px;
+    padding: 1px 4px;
+    border: 1px solid #6F737A;
+    border-radius: 4px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: #DFE1E5;
+    text-align: center;
+}
+
+/* Plugins */
+.accordion-plugins-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.plugins-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.plugins-checkbox {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #5A5D63;
+    border-radius: 3px;
+    background: #2B2D30;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.plugins-checkbox-checked {
+    background: #3574F0;
+    border-color: #3574F0;
+}
+
+.plugins-header-label {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #DFE1E5;
+}
+
+.plugins-hint {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #6F737A;
+    margin: 0 0 8px 0;
+}
+
+.plugins-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 0;
+}
+
+.plugin-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.plugin-icon {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.plugin-icon-rainbow {
+    background: linear-gradient(135deg, #FF6B6B, #4ECDC4, #45B7D1, #96E6A1);
+    border-radius: 100px;
+}
+
+.plugin-icon-vim {
+    background: linear-gradient(135deg, #019833, #000000);
+    border-radius: 2px;
+}
+
+.plugin-name {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #DFE1E5;
+}
+
+.plugin-bundled {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #5FAD65;
+    margin-left: 4px;
+}
+
+.plugin-check {
+    font-size: 14px;
+    color: #57965C;
+    margin-left: 2px;
+}
+
+.plugin-install-link {
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #6B9BFA;
+    cursor: pointer;
+    margin-left: 4px;
+}
+
+.plugin-install-link:hover {
+    text-decoration: underline;
+}
+
+/* Secondary Button (Get Started on step 4) */
+.wizard-secondary-btn {
+    padding: 10px 24px;
+    background: transparent;
+    border: 1px solid #4E5157;
+    border-radius: 4px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #DFE1E5;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.wizard-secondary-btn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: #6F737A;
+}

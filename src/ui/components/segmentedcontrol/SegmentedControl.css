@@ -1,0 +1,90 @@
+.segmented-control {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    border-radius: 4px;
+    height: 40px;
+}
+
+/* Background container */
+.segmented-control-background {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 28px;
+    transform: translateY(-50%);
+    border-radius: 4px;
+    border: 1px solid var(--segmented-control-border);
+    pointer-events: none;
+}
+
+/* Individual segment button */
+.segmented-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 12px;
+    min-width: 48px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    transition: all 0.15s ease;
+    box-sizing: border-box;
+}
+
+.segmented-button-content {
+    font-family: Inter, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+    color: var(--segmented-control-text);
+    white-space: nowrap;
+}
+
+/* Selected state */
+.segmented-button.selected {
+    background: var(--segmented-control-selected-bg);
+    border-color: var(--segmented-control-selected-border);
+}
+
+.segmented-button.selected .segmented-button-content {
+    color: var(--segmented-control-selected-text);
+}
+
+/* Hover state for unselected */
+.segmented-button:not(.selected):not(:disabled):hover {
+    background: var(--segmented-control-hover-bg);
+}
+
+/* Disabled state */
+.segmented-control.disabled .segmented-control-background {
+    border-color: var(--segmented-control-disabled-border);
+}
+
+.segmented-control.disabled .segmented-button {
+    cursor: not-allowed;
+}
+
+.segmented-control.disabled .segmented-button .segmented-button-content {
+    color: var(--segmented-control-disabled-text);
+}
+
+.segmented-control.disabled .segmented-button.selected {
+    background: var(--segmented-control-disabled-selected-bg);
+    border-color: var(--segmented-control-disabled-selected-border);
+}
+
+/* Focused state */
+.segmented-control.focused .segmented-control-background {
+    border-color: var(--segmented-control-focus-border);
+}
+
+.segmented-control.focused .segmented-button.selected {
+    border-color: var(--segmented-control-focus-border);
+    box-shadow: 0 0 0 1px var(--segmented-control-focus-border);
+}
+

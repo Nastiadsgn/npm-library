@@ -1,0 +1,122 @@
+/* Progress Bar Container */
+.progress-bar-container {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+
+/* Horizontal layout (label on left) */
+.progress-bar-horizontal {
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Vertical layout (label on top) */
+.progress-bar-vertical {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+/* Progress bar content wrapper (track + stop button) */
+.progress-bar-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+    min-width: 0;
+}
+
+.progress-bar-vertical .progress-bar-content {
+    width: 100%;
+}
+
+/* Progress bar track (background) */
+.progress-bar-track {
+    flex: 1;
+    height: 4px;
+    background: var(--gray-110);
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Progress bar fill */
+.progress-bar-fill {
+    height: 100%;
+    background: var(--accent-primary);
+    border-radius: 2px;
+    transition: width 0.2s ease-out;
+}
+
+/* Indeterminate animation */
+.progress-bar-indeterminate {
+    width: 30% !important;
+    animation: progress-indeterminate 1.5s ease-in-out infinite;
+}
+
+@keyframes progress-indeterminate {
+    0% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(200%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Label */
+.progress-bar-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.progress-bar-vertical .progress-bar-label {
+    color: var(--text-primary);
+}
+
+/* Hint */
+.progress-bar-hint {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--text-secondary);
+}
+
+/* Stop button */
+.progress-bar-stop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    flex-shrink: 0;
+    transition: opacity 0.15s ease;
+}
+
+.progress-bar-stop:hover {
+    opacity: 0.8;
+}
+
+.progress-bar-stop:active {
+    opacity: 0.6;
+}
+
+.progress-bar-stop .icon {
+    width: 16px;
+    height: 16px;
+}
+

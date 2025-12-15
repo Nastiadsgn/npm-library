@@ -1,0 +1,70 @@
+/* Dialog Header */
+.dialog-header {
+    background-color: #2B2D30; /* Dark/Gray/Gray 2 */
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.dialog-header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 0;
+    position: relative;
+}
+
+.dialog-header-title {
+    font-family: Inter, sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px;
+    color: #DFE1E5; /* Dark/Gray/Gray 12 */
+    text-align: center;
+    margin: 0;
+}
+
+/* macOS Window Controls */
+.dialog-header-controls {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.dialog-header-button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: filter 0.2s ease;
+}
+
+.dialog-header-button:hover {
+    filter: brightness(1.2);
+}
+
+.dialog-header-close {
+    background-color: #EC6A5F;
+}
+
+.dialog-header-minimize {
+    background-color: #F4BF4F;
+}
+
+.dialog-header-expand {
+    background-color: #61C554;
+}
+
+/* Header Border */
+.dialog-header-border {
+    height: 1px;
+    background-color: #393B40; /* Dark/Gray/Gray 3 */
+    width: 100%;
+}
+

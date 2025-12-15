@@ -1,0 +1,55 @@
+/* Tool Window */
+.tool-window {
+    display: flex;
+    flex-direction: column;
+    background: var(--tool-window-bg);
+    border: 0px solid transparent;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Tool Window Content Area */
+.tool-window-content {
+    flex: 1;
+    background: var(--tool-window-bg);
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 0; /* Important for flex child to allow shrinking */
+}
+
+/* Custom Scrollbar Styling */
+.tool-window-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.tool-window-content::-webkit-scrollbar-track {
+    background: var(--tool-window-scrollbar-track);
+}
+
+.tool-window-content::-webkit-scrollbar-thumb {
+    background: var(--tool-window-scrollbar-thumb);
+    border-radius: 4px;
+}
+
+.tool-window-content::-webkit-scrollbar-thumb:hover {
+    background: var(--tool-window-scrollbar-thumb-hover);
+}
+
+/* Content Padding */
+.tool-window-content > * {
+    padding: 0;
+    margin: 0;
+}
+
+/* Ensure tree and other content fill the space properly */
+.tool-window-content .tree {
+    height: 100%;
+    border-radius: 0;
+    border: none;
+}
+
+/* Remove default tree container background to use tool window content background */
+.tool-window-content .tree {
+    background: transparent;
+}

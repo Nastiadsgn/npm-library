@@ -1,0 +1,823 @@
+/* OnboardingStep1C - Import or Customize Welcome Screen */
+.onboarding-c {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 900px;
+    height: 100%;
+    min-height: 600px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0.12) 100%), 
+                linear-gradient(90deg, #2B2D30 0%, #2B2D30 100%);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Main Toolbar */
+.onboarding-c-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    padding: 0 16px;
+    flex-shrink: 0;
+}
+
+.onboarding-c-toolbar .toolbar-left-side {
+    display: flex;
+    align-items: center;
+}
+
+.onboarding-c-toolbar .toolbar-right-side {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+/* macOS Window Controls */
+.onboarding-c-toolbar .window-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.onboarding-c-toolbar .window-control {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.onboarding-c-toolbar .window-control.close {
+    background: #FF5F56;
+}
+
+.onboarding-c-toolbar .window-control.minimize {
+    background: #FFBD2E;
+}
+
+.onboarding-c-toolbar .window-control.maximize {
+    background: #27C93F;
+}
+
+/* Toolbar Icon Buttons */
+.onboarding-c-toolbar .toolbar-icon-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.15s ease;
+}
+
+.onboarding-c-toolbar .toolbar-icon-button:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.onboarding-c-toolbar .toolbar-icon-button .icon {
+    opacity: 0.8;
+}
+
+/* Main Content Area */
+.onboarding-c-content {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+    gap: 1px;
+}
+
+/* Vertical Stripes */
+.onboarding-c-stripe {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 0 8px 0;
+    background: transparent;
+}
+
+.onboarding-c-stripe-left {
+    width: 40px;
+    flex-shrink: 0;
+}
+
+.onboarding-c-stripe-right {
+    width: 40px;
+    flex-shrink: 0;
+    padding-bottom: 6px;
+}
+
+/* Stripe Sections */
+.onboarding-c-stripe .stripe-section-top {
+    flex: 0 0 auto;
+}
+
+.onboarding-c-stripe .stripe-section-bottom {
+    flex: 0 0 auto;
+    margin-top: auto;
+}
+
+/* Center Content Area */
+.onboarding-c-center {
+    flex: 1;
+    min-width: 0;
+    min-height: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Editor - fixed height, scrollable content area */
+.onboarding-c-center .editor {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #17181A;
+}
+
+/* Background Gradient Effects */
+.onboarding-c-bg-effects {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.onboarding-c-bg-ellipse {
+    position: absolute;
+    width: 780px;
+    height: 780px;
+    border-radius: 50%;
+    filter: blur(200px);
+    opacity: 0.5;
+}
+
+.onboarding-c-bg-ellipse-1 {
+    left: -288px;
+    top: -32px;
+    background: radial-gradient(circle, rgba(1, 125, 254, 0.4) 0%, transparent 70%); /* #017DFE */
+}
+
+.onboarding-c-bg-ellipse-2 {
+    left: 550px;
+    top: -347px;
+    background: radial-gradient(circle, rgba(240, 235, 24, 0.3) 0%, transparent 70%); /* #F0EB18 */
+}
+
+.onboarding-c-bg-ellipse-3 {
+    left: 765px;
+    top: 548px;
+    background: radial-gradient(circle, rgba(1, 196, 244, 0.3) 0%, transparent 70%); /* #01C4F4 */
+}
+
+/* Welcome Content */
+.onboarding-c-welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    padding: 40px;
+    margin: auto 0;
+}
+
+/* WebStorm Icon */
+.onboarding-c-icon {
+    margin-bottom: 4px;
+}
+
+/* Welcome Title */
+.onboarding-c-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #DFE1E5;
+    margin: 0;
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+/* Subtitle */
+.onboarding-c-subtitle {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #818594;
+    margin: 0;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+/* Two Panels Container */
+.onboarding-c-panels {
+    display: flex;
+    gap: 24px;
+}
+
+/* Individual Panel */
+.onboarding-c-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 352px;
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+}
+
+/* Panel Title */
+.onboarding-c-panel-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #DFE1E5;
+    margin: 0;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+/* Panel Description (for right panel) */
+.onboarding-c-panel-description {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #DFE1E5;
+    margin: 0;
+    margin-bottom: 24px;
+    margin-top: 24px;
+    text-align: center;
+}
+
+/* Panel Buttons Container */
+.onboarding-c-panel-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 227px;
+}
+
+/* Import Button */
+.onboarding-c-import-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 10px 24px;
+    background: transparent;
+    border: 1px solid #4E5157;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.onboarding-c-import-btn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: #6E7177;
+}
+
+.onboarding-c-import-btn:active {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Import Button Icons Container */
+.onboarding-c-panel .import-btn-icons {
+    display: flex;
+    gap: 4px;
+}
+
+/* Scaled icons (24px → 16px) for better quality */
+.onboarding-c-panel .import-btn-icons-scaled .ide-icon {
+    width: 16px !important;
+    height: 16px !important;
+}
+
+.onboarding-c-panel .import-btn-icons-scaled .ide-icon img {
+    width: 16px !important;
+    height: 16px !important;
+}
+
+/* Import Button Text */
+.onboarding-c-panel .import-btn-text {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #DFE1E5;
+    white-space: nowrap;
+}
+
+/* Import Button Chevron */
+.onboarding-c-panel .import-btn-chevron {
+    opacity: 0.6;
+}
+
+/* Import Button Icon */
+.onboarding-c-panel .import-btn-icon {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.onboarding-c-panel .import-btn-icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* VS Code Icon specific */
+.onboarding-c-panel .import-btn-icon.vscode-icon svg {
+    width: 14px;
+    height: 14px;
+}
+
+/* Cursor Icon specific */
+.onboarding-c-panel .import-btn-icon.cursor-icon svg {
+    width: 14px;
+    height: 14px;
+    border-radius: 2px;
+}
+
+/* Customize Button */
+.onboarding-c-customize-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 227px;
+    padding: 10px 24px;
+    background: transparent;
+    border: 1px solid #4E5157;
+    border-radius: 4px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #DFE1E5;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.onboarding-c-customize-btn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: #6E7177;
+}
+
+.onboarding-c-customize-btn:active {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Override StripeContainer for Onboarding C */
+.onboarding-c .stripe-container {
+    background: transparent;
+}
+
+/* Override StatusBar for Onboarding C */
+.onboarding-c .status-bar {
+    flex-shrink: 0;
+    border-top: none;
+    background: transparent;
+}
+
+/* ============================= */
+/* Customize Screen Styles       */
+/* ============================= */
+
+.onboarding-c .wizard-customize-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    padding: 40px;
+    margin: auto 0;
+    width: 100%;
+    max-width: 500px;
+}
+
+.onboarding-c .wizard-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #DFE1E5;
+    margin: 0;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+/* Accordion */
+.onboarding-c .wizard-accordion {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.onboarding-c .accordion-item {
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+}
+
+/* Accordion Header */
+.onboarding-c .accordion-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    height: 48px;
+    padding: 0 12px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.onboarding-c .accordion-header:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+/* Accordion Checkbox */
+.onboarding-c .accordion-checkbox {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #5A5D63;
+    border-radius: 3px;
+    background: #2B2D30;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.onboarding-c .accordion-checkbox-checked {
+    background: #3574F0;
+    border-color: #3574F0;
+    cursor: pointer;
+}
+
+.onboarding-c .accordion-checkbox-checked:hover {
+    background: #4A8AF4;
+    border-color: #4A8AF4;
+}
+
+/* Accordion Label */
+.onboarding-c .accordion-label {
+    flex: 1;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #DFE1E5;
+    text-align: left;
+}
+
+/* Accordion Chevron */
+.onboarding-c .accordion-chevron {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+    opacity: 0.6;
+}
+
+.onboarding-c .accordion-chevron-down {
+    transform: rotate(90deg);
+}
+
+/* Accordion Content */
+.onboarding-c .accordion-content {
+    padding: 0 12px 12px 36px;
+}
+
+.onboarding-c .accordion-description {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #9DA0A8;
+    margin: 0 0 12px 0;
+}
+
+/* Theme Options */
+.onboarding-c .theme-options {
+    display: flex;
+    gap: 16px;
+}
+
+.onboarding-c .editor-scheme-options {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 16px;
+    justify-content: start;
+}
+
+.onboarding-c .theme-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.onboarding-c .theme-preview {
+    width: 88px;
+    height: 48px;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #4E5157;
+    transition: border-color 0.15s ease, border-width 0.15s ease;
+}
+
+.onboarding-c .theme-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.onboarding-c .theme-option-selected .theme-preview {
+    border: 2px solid #3574F0;
+}
+
+.onboarding-c .theme-option:hover:not(.theme-option-selected) .theme-preview {
+    border-color: #6F737A;
+}
+
+.onboarding-c .theme-label {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #9DA0A8;
+}
+
+.onboarding-c .theme-option-selected .theme-label {
+    color: #DFE1E5;
+}
+
+/* Scale Options */
+.onboarding-c .scale-options,
+.onboarding-c .scheme-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.onboarding-c .scale-option,
+.onboarding-c .scheme-option {
+    padding: 6px 12px;
+    background: transparent;
+    border: 1px solid #4E5157;
+    border-radius: 4px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: #B4B8BF;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.onboarding-c .scale-option:hover,
+.onboarding-c .scheme-option:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: #6F737A;
+}
+
+.onboarding-c .scale-option-selected,
+.onboarding-c .scheme-option-selected {
+    background: #3574F0;
+    border-color: #3574F0;
+    color: #FFFFFF;
+}
+
+.onboarding-c .scale-option-selected:hover,
+.onboarding-c .scheme-option-selected:hover {
+    background: #4A8AF4;
+    border-color: #4A8AF4;
+}
+
+/* Keymap Section */
+.onboarding-c .accordion-keymap-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.onboarding-c .keymap-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.onboarding-c .keymap-btn {
+    padding: 6px 12px;
+    background: transparent;
+    border: 1px solid #4E5157;
+    border-radius: 4px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #DFE1E5;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.onboarding-c .keymap-btn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: #6F737A;
+}
+
+.onboarding-c .keymap-btn-selected {
+    background: #3574F0;
+    border-color: #3574F0;
+    color: #FFFFFF;
+}
+
+.onboarding-c .keymap-btn-selected:hover {
+    background: #4A8AF4;
+    border-color: #4A8AF4;
+}
+
+/* Shortcuts List */
+.onboarding-c .keymap-shortcuts {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.onboarding-c .shortcut-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.onboarding-c .shortcut-item .icon {
+    opacity: 0.6;
+}
+
+.onboarding-c .shortcut-action {
+    flex: 1;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #DFE1E5;
+}
+
+.onboarding-c .shortcut-keys {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.onboarding-c .shortcut-prefix {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: #DFE1E5;
+}
+
+.onboarding-c .shortcut-key {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 18px;
+    padding: 1px 4px;
+    border: 1px solid #6F737A;
+    border-radius: 4px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: #DFE1E5;
+    text-align: center;
+}
+
+/* Plugins */
+.onboarding-c .accordion-plugins-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.onboarding-c .plugins-hint {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #6F737A;
+    margin: 0 0 8px 0;
+}
+
+.onboarding-c .plugins-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 0;
+}
+
+.onboarding-c .plugin-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.onboarding-c .plugin-icon {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.onboarding-c .plugin-icon-rainbow {
+    background: linear-gradient(135deg, #FF6B6B, #4ECDC4, #45B7D1, #96E6A1);
+    border-radius: 100px;
+}
+
+.onboarding-c .plugin-icon-vim {
+    background: linear-gradient(135deg, #019833, #000000);
+    border-radius: 2px;
+}
+
+.onboarding-c .plugin-name {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #DFE1E5;
+}
+
+.onboarding-c .plugin-bundled {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #5FAD65;
+    margin-left: 4px;
+}
+
+.onboarding-c .plugin-check {
+    font-size: 14px;
+    color: #57965C;
+    margin-left: 2px;
+}
+
+.onboarding-c .plugin-install-link {
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #6B9BFA;
+    cursor: pointer;
+    margin-left: 4px;
+}
+
+.onboarding-c .plugin-install-link:hover {
+    text-decoration: underline;
+}
+
+/* Secondary Button (Get Started) */
+.onboarding-c .wizard-secondary-btn {
+    padding: 10px 24px;
+    background: transparent;
+    border: 1px solid #4E5157;
+    border-radius: 4px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #DFE1E5;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.onboarding-c .wizard-secondary-btn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: #6F737A;
+}

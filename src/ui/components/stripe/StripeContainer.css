@@ -1,0 +1,56 @@
+/* Stripe Container Component */
+.stripe-container {
+    width: 40px;
+    background: var(--gray-130);
+    border-right: 1px solid var(--gray-140);
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.stripe-container-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 0;
+}
+
+/* Stripe Separator */
+.stripe-separator {
+    width: 40px;
+    height: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.stripe-separator-line {
+    width: 24px;
+    height: 1px;
+    background: var(--border-secondary);
+}
+
+/* Content sections */
+.stripe-container-top,
+.stripe-container-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stripe-container-top {
+    flex: 0 0 auto;
+}
+
+.stripe-container-bottom {
+    flex: 0 0 auto;
+    margin-top: auto;
+}
+
+/* Spacing for stripe buttons in container */
+.stripe-container .stripe {
+    margin: 0;
+    flex-shrink: 0;
+}

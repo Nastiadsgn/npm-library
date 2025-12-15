@@ -1,0 +1,148 @@
+/* Code Example Component */
+.code-example {
+    width: 100%;
+    border: 1px solid var(--border-primary);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--gray-140);
+    display: flex;
+}
+
+.code-example.with-line-numbers {
+    display: flex;
+}
+
+.line-numbers {
+    background: transparent;
+    border-right: 1px solid var(--border-secondary);
+    padding: 12px 0px 12px 4px;
+    color: var(--text-disabled);
+    user-select: none;
+    overflow: hidden;
+    min-width: 40px;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.line-numbers,
+.line-number {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+.line-number {
+    white-space: nowrap;
+    padding: 0px 8px 0px 0px;
+    border-radius: 4px 0px 0px 4px;
+}
+
+.line-number.current {
+    background: var(--bg-primary);
+    color: var(--text-secondary);
+}
+
+.code-input-container {
+    flex: 1;
+    position: relative;
+}
+
+.current-line-highlight {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: var(--bg-primary);
+    pointer-events: none;
+    z-index: 1;
+    transition: top 0.1s ease;
+}
+
+.syntax-highlight-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 12px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    color: transparent;
+    pointer-events: none;
+    z-index: 1;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+.highlighted-line {
+    min-height: 22px;
+}
+
+.code-input {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    padding: 12px;
+    height: 100%;
+    background: transparent;
+    border: none;
+    color: var(--editor-default-text);
+    resize: none;
+    outline: none;
+    tab-size: 4;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+.code-example.resizable .code-input {
+    resize: vertical;
+}
+
+.code-input::placeholder {
+    color: var(--text-muted);
+}
+
+.code-input::selection {
+    background: var(--selection-bg);
+}
+
+/* Syntax Highlighting Tokens using Editor Semantic Colors */
+.syntax-highlight-overlay .token-keyword {
+    color: var(--editor-keyword);
+    font-weight: bold;
+}
+
+.syntax-highlight-overlay .token-string {
+    color: var(--editor-string);
+}
+
+.syntax-highlight-overlay .token-comment {
+    color: var(--editor-comment);
+    font-style: italic;
+}
+
+.syntax-highlight-overlay .token-doc-comment {
+    color: var(--editor-doc-comment);
+    font-style: italic;
+}
+
+.syntax-highlight-overlay .token-number {
+    color: var(--editor-number);
+}
+
+.syntax-highlight-overlay .token-constant {
+    color: var(--editor-constant);
+    font-weight: bold;
+}
+
+.syntax-highlight-overlay .token-annotation {
+    color: var(--editor-annotation);
+}
