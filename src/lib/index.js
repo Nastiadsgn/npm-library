@@ -13,6 +13,9 @@
  * ```
  */
 
+// Import all styles (theme tokens + component styles)
+import './styles';
+
 // Theme Provider
 export { ThemeProvider, useTheme } from '../ThemeContext';
 
